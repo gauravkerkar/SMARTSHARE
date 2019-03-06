@@ -1,5 +1,5 @@
 <?php
-session_start();
+/* session_start();
 
 if ($_SESSION['student'] == "") {
   header('location: login.php');
@@ -18,7 +18,7 @@ if(isset($_POST['logout'])) {
   exit();
 }
 
-
+*/
 // define variables and set to empty values
 $en_no = $name = $email = $mob_no = $username = $password = "";
 $en_noErr = $nameErr = $emailErr = $mob_noErr = $usernameErr = $passwordErr = $loginErr = "";
