@@ -124,24 +124,14 @@
                                 <span class="input-group-text"><img src="img/email_icon.PNG" width="20"></span>
                             </div>
                             <input type="email" name="email" class="form-control input_user"
-                                placeholder="Email address">
-                        </div>
-                        <div>
-                            <strong>
-                                <?php echo $emailErr; ?>
-                            </strong>
+                                placeholder="Email address" required>
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><img src="img/lock_icon.PNG" width="24"></span>
                             </div>
                             <input type="password" name="password" class="form-control input_pass" id="pass"
-                                placeholder="Password" \>
-                        </div>
-                        <div>
-                            <strong>
-                                <?php echo $passwordErr; ?>
-                                <?php echo $loginErr; ?></strong>
+                                placeholder="Password" required>
                         </div>
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">
