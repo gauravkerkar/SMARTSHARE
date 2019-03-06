@@ -1,22 +1,5 @@
 <?php
-session_start();
 
-if ($_SESSION['student'] == "") {
-  header('location: login.php');
-  exit();
-}
-
-if ($_SESSION['admin'] == "") {
-  header('location: adminlogin.php');
-  exit();
-}
-
-if(isset($_POST['logout'])) {
-  unset($_SESSION['student']);
-  session_destroy();
-  header('location: login.php');
-  exit();
-}
 
 
 // define variables and set to empty values
