@@ -94,22 +94,22 @@
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Samister I</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester I</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Samister II</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester II</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Samister III</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester III</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Samister IV</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester IV</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app  buttonsborder"><i class="fa fa-th"></i>Samister V</button>
+                <button type="button" class="btn btn-app  buttonsborder"><i class="fa fa-th"></i>Semester V</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Samister VI</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester VI</button>
             </div>
             
         </div>

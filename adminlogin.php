@@ -123,25 +123,14 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><img src="img/user_icon.PNG" width="24"></span>
                             </div>
-                            <input type="text" name="username" class="form-control input_user" placeholder="Admin">
-                        </div>
-                        <div>
-                            <strong>
-                                <?php echo $usernameErr; ?>
-                            </strong>
+                            <input type="text" name="username" class="form-control input_user" placeholder="Admin" required>
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
                                 <span class="input-group-text"><img src="img/lock_icon.PNG" width="24"></span>
                             </div>
                             <input type="password" name="password" class="form-control input_pass" id="pass"
-                                placeholder="Password">
-                        </div>
-                        <div>
-                            <strong>
-                                <?php echo $passwordErr; ?>
-                                <?php echo $loginErr; ?>
-                            </strong>
+                                placeholder="Password" required>
                         </div>
                         <div class="form-group">
                             <div class="custom-control custom-checkbox">

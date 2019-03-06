@@ -116,23 +116,17 @@
               <input type="tel" name="en_no" class="form-control input_user" placeholder="Enrollment number" pattern="[1-2]{1}[0-9]{1}[0]{1}[1]{1}[1]{1}[3]{1}[0-9]{3}" oninvalid="this.setCustomValidity('Please!! enter computer department En.no only!')"
               oninput="this.setCustomValidity('')" maxlength="9" required>
             </div>
-            <div>
-            </div>
             <div class="input-group mb-3">
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/user_icon.PNG" width="24"></span>
               </div>
               <input type="text" name="name" class="form-control input_user" placeholder="Name" required>
             </div>
-            <div>
-            </div>
             <div class="input-group mb-3">
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/email_icon.PNG" width="22"></span>
               </div>
               <input type="email" name="email" class="form-control input_user" placeholder="Email address" required>
-            </div>
-            <div>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-append">
@@ -141,17 +135,11 @@
               <input type="tel" name="mob_no" class="form-control input_user" placeholder="Mobile number" pattern="[1-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('Please! enter vaild phone number')"
               oninput="this.setCustomValidity('')" maxlength="10" required>
             </div>
-            <div>
-             
-            </div>
             <div class="input-group mb-2">
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/lock_icon.PNG" width="24"></span>
               </div>
               <input type="password" name="password" class="form-control input_pass" placeholder="Password" required>
-            </div>
-            <div>
-          
             </div>
         </div>
         <div class="d-flex justify-content-center mt-3 login_container">
