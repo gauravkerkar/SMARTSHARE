@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD
-/* session_start();
+/*session_start();
 
-=======
-session_start();
-/*
->>>>>>> 46deb6ecffe4a2709124a39e31bfc461df51e698
 if ($_SESSION['student'] == "") {
   header('location: login.php');
   exit();
@@ -22,13 +17,8 @@ if(isset($_POST['logout'])) {
   header('location: login.php');
   exit();
 }
-<<<<<<< HEAD
-
-*/
-=======
 */
 
->>>>>>> 46deb6ecffe4a2709124a39e31bfc461df51e698
 // define variables and set to empty values
 $en_no = $name = $email = $mob_no = $username = $password = "";
 

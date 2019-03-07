@@ -11,54 +11,81 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+<form action="upload.php" method='post' enctype="multipart/form-data">
+Description of File: <input type="text" name="description_entered"/><br><br>
+<input type="file" name="file"/><br><br>
+	
+<input type="submit" name="submit" value="Upload"/>
+
 </form>
-<?php
-$target_dir = "C:/a/a";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
+<?php 
+if(isset($_POST['submit'])){
+$name= $_FILES['file']['name'];
+
+$tmp_name= $_FILES['file']['tmp_name'];
+
+$submitbutton= $_POST['submit'];
+
+$position= strpos($name, "."); 
+
+$fileextension= substr($name, $position + 1);
+
+$fileextension= strtolower($fileextension);
+
+$description= $_POST['description_entered'];
+
+if (isset($name)) {
+
+$path= '../';
+
+if (!empty($name)){
+if (move_uploaded_file($tmp_name, $path.$name)) {
+echo 'Uploaded!';
+
 }
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
 }
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 500000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
 }
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
 }
 ?>
+<?php
+
+$db = mysqli_connect("localhost", "root", "", "smartshare");
+if (!$db)
+{
+die ('Could not connect:' . mysql_error());
+}
+
+
+
+if(!empty($description)){
+mysqli_query($db, "INSERT INTO files (description, filename)
+VALUES ('$description', '$name')");
+
+
+
+
+
+
+
+$result= mysqli_query($db, "SELECT description, filename FROM files ORDER BY ID desc" ) 
+or die("SELECT Error: ".mysql_error()); 
+
+print "<table border=1>\n"; 
+while ($row = mysqli_fetch_array($result)){ 
+$files_field= $row['filename'];
+$files_show= "Uploads/files/$files_field";
+$descriptionvalue= $row['description'];
+print "<tr>\n"; 
+print "\t<td>\n"; 
+echo "<font face=arial size=4/>$descriptionvalue</font>";
+print "</td>\n";
+print "\t<td>\n"; 
+echo "<div align=center><a href='$files_show'>$files_field</a></div>";
+print "</td>\n";
+print "</tr>\n"; 
+} 
+print "</table>\n"; 
+}
+?> 
 </body>
 </html>
