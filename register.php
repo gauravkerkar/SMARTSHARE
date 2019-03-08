@@ -126,7 +126,7 @@
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/email_icon.PNG" width="22"></span>
               </div>
-              <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" size="30"  oninvalid="this.setCustomValidity('Please! Enter Valid Email Id')"
+              <input type="email" name="email" pattern="[a-z0-9._%+-]+@gmail.com" size="30"  oninvalid="this.setCustomValidity('Please! Enter Valid Email Id')"
               oninput="this.setCustomValidity('')" class="form-control input_user" placeholder="Email address" required>
             </div>
             <div class="input-group mb-3">
