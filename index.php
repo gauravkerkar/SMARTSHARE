@@ -24,32 +24,37 @@
         .btn-app {
             border-radius: 3px;
             position: relative;
-            padding: 15px 5px;
+            padding: 6px 22px;
             margin: 0 0 10px 10px;
-            min-width: 80px;
-            height: 60px;
+            min-width: 121px;
+            height: 80px;
             text-align: center;
             border: 1px solid #ddd;
             background-color: #f4f4f4;
             font-size: 1rem;
         }
-        .btn-app .fa{
-            display: block;
-            color:rgb(130, 0, 120);
-        }
-        .box-hero{
-    position: relative;
-    border-radius: 8px;
-    margin-top: 30px;
-    background: #ffffff;
-    border-top: 3px solid #3c8dbc;
-    margin-bottom: 20px;
 
-    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-}
-.margin{
-    margin-top: 30px;
-}
+        .btn-app .sem {
+            display: block;
+            width: 65px;
+            height: 48px;
+            color: rgb(130, 0, 120);
+        }
+
+        .box-hero {
+            position: relative;
+            border-radius: 8px;
+            margin-top: 30px;
+            background: #ffffff;
+            border-top: 3px solid #3c8dbc;
+            margin-bottom: 20px;
+
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .margin {
+            margin-top: 30px;
+        }
     </style>
 </head>
 
@@ -94,24 +99,27 @@
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester I</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem1.png" class="sem" alt="sem1">Semester I</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester II</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem2.png" class="sem" alt="sem2">Semester
+                    II</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester III</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem3.png" class="sem" alt="sem3">Semester
+                    III</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester IV</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem4.png" class="sem" alt="sem4">Semester
+                    IV</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app  buttonsborder"><i class="fa fa-th"></i>Semester V</button>
+                <button type="button" class="btn btn-app  buttonsborder"><img src="./img/sem5.png" class="sem" alt="sem5">Semester V</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><i class="fa fa-th"></i>Semester VI</button>
+                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem6.png" class="sem" alt="sem6">Semester VI</button>
             </div>
-            
+
         </div>
     </div>
 

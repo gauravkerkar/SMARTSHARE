@@ -16,36 +16,8 @@ $query = mysqli_query($db, "select * from students where email='$email' && en_no
 $row = mysqli_fetch_array($query);
 
 if($row>0){
-    
-
-
-$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
-try{
-    //Server settings
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                        // Specify SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = '';               // SMTP username
-    $mail->Password = '';                        // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `SSL` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to 587 = `TLS` or 465 = `SSL`
-
-    //Recipients
-    $mail->setFrom($_POST['email'], $_POST['en']);
-    $mail->addAddress($email, $email);
-
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = "forgot password";                   // Set mail subject
-    $mail->Body = "Hi $email your password is {$row['password']}";
-
-    $mail->send();
-    echo '<script>alert("Message has been sent. We will contact you shortly!")</script>';
-}
-catch(Exception $e){
-    echo '<script>alert("Message has been sent. We wontact you shortly!")</script>';
-}
-
+    $mgClient = new Mailgun('96d6bda07df5452fb2750f2a667d28f0-8889127d-56978300');
+    $result = $mgClient->get("domains", array('limit' => 5, 'skip' => 10));
 }
     }
 ?>
