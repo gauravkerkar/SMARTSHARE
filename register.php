@@ -126,7 +126,7 @@
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/email_icon.PNG" width="22"></span>
               </div>
-              <input type="email" name="email" pattern="[a-z0-9._%+-]+@gmail.com" size="30"  oninvalid="this.setCustomValidity('Please! EnterGmail Id only')"
+              <input type="email" name="email" pattern="[a-z0-9._%+-]+@gmail.com" size="30"  oninvalid="this.setCustomValidity('Please! Enter Gmail Id only')"
               oninput="this.setCustomValidity('')" class="form-control input_user" placeholder="Email address" required>
             </div>
             <div class="input-group mb-3">
@@ -140,7 +140,8 @@
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/lock_icon.PNG" width="24"></span>
               </div>
-              <input type="password" name="password" class="form-control input_pass" placeholder="Password" required>
+              <input type="password" name="password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" oninvalid="this.setCustomValidity('Your password should include At least 1 Uppercase,1 Lowercase,1 Number,1 Symbol.')"
+              oninput="this.setCustomValidity('')" class="form-control input_pass" placeholder="Password" required>
             </div>
         </div>
         <div class="d-flex justify-content-center mt-3 login_container">
