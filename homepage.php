@@ -1,4 +1,5 @@
 <?php 
+    session_start();
     if ($_SESSION['admin'] == "") {
         header('location: adminlogin.php');
         exit();

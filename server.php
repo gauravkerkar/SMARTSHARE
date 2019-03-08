@@ -30,7 +30,7 @@ if (isset($_POST['login'])) {
 
   if ($email != "" && $password != "") {
     $password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
-    $query = "SELECT * FROM students WHERE email='$email' AND password='$password_encrypt'";
+    $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password_encrypt'";
     $result = mysqli_query($db, $query);
     if (mysqli_num_rows($result)==1) {
         $_SESSION['student'] = $email;
