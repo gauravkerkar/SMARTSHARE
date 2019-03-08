@@ -1,3 +1,16 @@
+<?php 
+    if ($_SESSION['admin'] == "") {
+        header('location: adminlogin.php');
+        exit();
+    }
+
+    if(isset($_POST['logout'])) {
+        unset($_SESSION['admin']);
+        session_destroy();
+        header('location: adminlogin.php');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html>
 <head>

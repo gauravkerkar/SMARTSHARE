@@ -1,3 +1,16 @@
+<?php
+    if ($_SESSION['student'] == "") {
+        header('location: login.php');
+        exit();
+    }
+
+    if(isset($_POST['logout'])) {
+        unset($_SESSION['student']);
+        session_destroy();
+        header('location: login.php');
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html>
 

@@ -13,7 +13,7 @@
         $query = mysqli_query($db, "SELECT * FROM students WHERE email='$email' && en_no='$en_no'") or die(mysqli_error($db));
         $row = mysqli_fetch_array($query);
 
-    if($row == 1){
+    if($row > 0){
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
     //Server settings
@@ -27,7 +27,7 @@
 
     //Recipients
     $mail->setFrom($_POST['email'], $_POST['en_no']);
-    $mail->addAddress($email, $email);
+    $mail->addAddress($email, $email);          // Add recipients address
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML

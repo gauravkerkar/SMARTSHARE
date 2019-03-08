@@ -14,7 +14,7 @@
         $query = mysqli_query($db, "SELECT * FROM admin WHERE id='$id' && username='$name'") or die(mysqli_error($db));
         $row = mysqli_fetch_array($query);
 
-    if($row == 1){
+    if($row > 0){
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try{
     //Server settings
@@ -27,8 +27,8 @@
     $mail->Port = 587;                                    // TCP port to connect to 587 = `TLS` or 465 = `SSL`
 
     //Recipients
-    $mail->setFrom($_POST['email'], $_POST['userid']);
-    $mail->addAddress($email, $email);
+    $mail->setFrom($_POST['email'], "Admin");
+    $mail->addAddress($email, $email);          // Add recipients address
 
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
