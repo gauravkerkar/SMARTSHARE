@@ -29,12 +29,12 @@ if (isset($_POST['login'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
   if ($email != "" && $password != "") {
-    $password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
-    $query = "SELECT * FROM students WHERE email='$email' AND password='$password_encrypt'";
+    //$password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
+    $query = "SELECT * FROM students WHERE email='$email' AND password='$password'";
     $result = mysqli_query($db, $query);
     if (mysqli_num_rows($result)==1) {
-        $_SESSION['student'] = $email;
-        header('location: index.php'); //redirect to index page
+      // $_SESSION['admin'] = $username;
+        //header('location: index.php'); //redirect to index page
         exit();	
     } else {
        echo '<script>alert("Invalid email and password!")</script>';

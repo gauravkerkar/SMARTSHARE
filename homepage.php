@@ -1,5 +1,5 @@
 <?php 
-    if ($_SESSION['admin'] == "") {
+    /*if ($_SESSION['admin'] == "") {
         header('location: adminlogin.php');
         exit();
     }
@@ -9,7 +9,7 @@
         session_destroy();
         header('location: adminlogin.php');
         exit();
-    }
+    }*/
 ?>
 <!DOCTYPE html>
 <html>
