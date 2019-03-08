@@ -10,7 +10,7 @@ if (isset($_POST['register'])) {
     $en_no = mysqli_real_escape_string($db, $_POST['en_no']);
     $name = mysqli_real_escape_string($db, $_POST['name']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
-    $mobno = mysqli_real_escape_string($db, $_POST['mob_no']);
+    $mob_no = mysqli_real_escape_string($db, $_POST['mob_no']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
   // If no errors, save the user's data to the database
