@@ -1,10 +1,6 @@
 <?php 
-<<<<<<< HEAD
-    /*if ($_SESSION['admin'] == "") {
-=======
     session_start();
     if ($_SESSION['admin'] == "") {
->>>>>>> 5b272ec640709804ca4c7f9ec129b620f9b540da
         header('location: adminlogin.php');
         exit();
     }
@@ -14,7 +10,7 @@
         session_destroy();
         header('location: adminlogin.php');
         exit();
-    }*/
+    }
 ?>
 <!DOCTYPE html>
 <html>
