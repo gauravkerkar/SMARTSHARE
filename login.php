@@ -150,7 +150,7 @@
                         Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
                     </div>
                     <div class="d-flex justify-content-center links">
-                        <a href="#" class="text-white">Forgot your password?</a>
+                        <a href="forgot_password_student.php" class="text-white">Forgot your password?</a>
                     </div>
                 </div>
             </div>

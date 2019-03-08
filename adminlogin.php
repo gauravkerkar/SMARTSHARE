@@ -145,7 +145,7 @@
                     </form>
                 </div>
                 <div class="d-flex justify-content-center links">
-                    <a href="#" class="text-white">Forgot your password?</a>
+                    <a href="forgot_password_admin.php" class="text-white">Forgot your password?</a>
                 </div>
             </div>
         </div>
