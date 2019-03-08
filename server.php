@@ -29,8 +29,13 @@ if (isset($_POST['login'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
   if ($email != "" && $password != "") {
+<<<<<<< HEAD
     //$password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
     $query = "SELECT * FROM students WHERE email='$email' AND password='$password'";
+=======
+    $password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
+    $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password_encrypt'";
+>>>>>>> 5b272ec640709804ca4c7f9ec129b620f9b540da
     $result = mysqli_query($db, $query);
     if (mysqli_num_rows($result)==1) {
       // $_SESSION['admin'] = $username;
