@@ -113,7 +113,7 @@
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/id_icon.PNG" width="22"></span>
               </div>
-              <input type="tel" name="en_no" class="form-control input_user" placeholder="Enrollment number" pattern="[1-2]{1}[0-9]{1}[0]{1}[1]{1}[1]{1}[3]{1}[0-9]{3}" oninvalid="this.setCustomValidity('Please!! enter computer department En.no only!')"
+              <input type="tel" name="en_no" class="form-control input_user" placeholder="Enrollment number" pattern="[1-2]{1}[0-9]{1}[0]{1}[1]{1}[1]{1}[3]{1}[0-9]{3}" oninvalid="this.setCustomValidity('Please enter computer department enrollment number!!')"
               oninput="this.setCustomValidity('')" maxlength="9" required>
             </div>
             <div class="input-group mb-3">
@@ -132,7 +132,7 @@
               <div class="input-group-append">
                 <span class="input-group-text"><img src="img/phone_icon.PNG" width="24"></span>
               </div>
-              <input type="tel" name="mob_no" class="form-control input_user" placeholder="Mobile number" pattern="[1-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('Please! enter vaild phone number')"
+              <input type="tel" name="mob_no" class="form-control input_user" placeholder="Mobile number" pattern="[7-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('Please enter vaild phone number!!')"
               oninput="this.setCustomValidity('')" maxlength="10" required>
             </div>
             <div class="input-group mb-2">
