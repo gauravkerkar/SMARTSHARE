@@ -1,17 +1,4 @@
-<?php
-    session_start();
-    if ($_SESSION['student'] == "") {
-        header('location: login.php');
-        exit();
-    }
-
-    if(isset($_POST['logout'])) {
-        unset($_SESSION['student']);
-        session_destroy();
-        header('location: login.php');
-        exit();
-    }
-?>
+<?php include('session_student.php'); ?>
 <!DOCTYPE html>
 <html>
 
@@ -69,71 +56,46 @@
         .margin {
             margin-top: 30px;
         }
+
+        div.dropdown-menu.p-2 {
+            width: max-content;
+        }
     </style>
 </head>
 
 <body>
-    <div class="home_hero">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><img src="img/logo.png" style="width:40px" alt="logo"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">My Account</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Department
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Computer Engineering</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Share</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
+    <?php include('navigation_student.php'); ?>
     <div class="container box-hero">
         <h4 class="box-body">Quick Links</h4>
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem1.png" class="sem" alt="sem1">Semester I</button>
+                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem1.png" class="sem"
+                        alt="sem1">Semester I</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem2.png" class="sem" alt="sem2">Semester
+                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem2.png" class="sem"
+                        alt="sem2">Semester
                     II</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem3.png" class="sem" alt="sem3">Semester
+                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem3.png" class="sem"
+                        alt="sem3">Semester
                     III</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem4.png" class="sem" alt="sem4">Semester
+                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem4.png" class="sem"
+                        alt="sem4">Semester
                     IV</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app  buttonsborder"><img src="./img/sem5.png" class="sem" alt="sem5">Semester V</button>
+                <button type="button" class="btn btn-app  buttonsborder" href=""><img src="./img/sem5.png" class="sem"
+                        alt="sem5">Semester V</button>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href="#"><img src="./img/sem6.png" class="sem" alt="sem6">Semester VI</button>
+                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem6.png" class="sem"
+                        alt="sem6">Semester VI</button>
             </div>
-
         </div>
     </div>
 

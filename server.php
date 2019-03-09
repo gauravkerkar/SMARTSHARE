@@ -1,4 +1,5 @@
 <?php
+session_start();
 // define variables and set to empty values
 $en_no = $name = $email = $mob_no = $username = $password = "";
 
@@ -15,10 +16,9 @@ if (isset($_POST['register'])) {
 
   // If no errors, save the user's data to the database
   if ($en_no != "" && $name != "" && $email != "" && $mob_no != "" && $password != "") {
-    $password_encrypt = md5($password); // Password encryption before storing in the database [Message Digest 5]
-    $query = "INSERT INTO students (en_no, name, email, phone_no, password) VALUES ('$en_no', '$name', '$email', '$mob_no', '$password_encrypt')";
+    $query = "INSERT INTO students (en_no, name, email, phone_no, password) VALUES ('$en_no', '$name', '$email', '$mob_no', '$password')";
     mysqli_query($db, $query);
-    header('location: login.php'); //redirect to login page
+    header('location: login_student.php'); //redirect to login page
     exit();	
   }
 }
@@ -29,18 +29,12 @@ if (isset($_POST['login'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
   if ($email != "" && $password != "") {
-<<<<<<< HEAD
-    //$password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
-    $query = "SELECT * FROM students WHERE email='$email' AND password='$password'";
-=======
-    $password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
-    $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password_encrypt'";
->>>>>>> 5b272ec640709804ca4c7f9ec129b620f9b540da
+    $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password'";
     $result = mysqli_query($db, $query);
     if (mysqli_num_rows($result)==1) {
-      // $_SESSION['admin'] = $username;
-        //header('location: index.php'); //redirect to index page
-        exit();	
+      $_SESSION['student'] = $email;
+      header('location: index.php'); //redirect to index page
+      exit();	
     } else {
        echo '<script>alert("Invalid email and password!")</script>';
     }
