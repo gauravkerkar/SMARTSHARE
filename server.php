@@ -1,5 +1,4 @@
 <?php
-session_start();
 // define variables and set to empty values
 $en_no = $name = $email = $mob_no = $username = $password = "";
 
@@ -11,14 +10,15 @@ if (isset($_POST['register'])) {
     $en_no = mysqli_real_escape_string($db, $_POST['en_no']);
     $name = mysqli_real_escape_string($db, $_POST['name']);
     $email = mysqli_real_escape_string($db, $_POST['email']);
-    $mob_no = mysqli_real_escape_string($db, $_POST['mob_no']);
+    $mobno = mysqli_real_escape_string($db, $_POST['mob_no']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
   // If no errors, save the user's data to the database
   if ($en_no != "" && $name != "" && $email != "" && $mob_no != "" && $password != "") {
-    $query = "INSERT INTO students (en_no, name, email, phone_no, password) VALUES ('$en_no', '$name', '$email', '$mob_no', '$password')";
+    $password_encrypt = md5($password); // Password encryption before storing in the database [Message Digest 5]
+    $query = "INSERT INTO students (en_no, name, email, phone_no, password) VALUES ('$en_no', '$name', '$email', '$mob_no', '$password_encrypt')";
     mysqli_query($db, $query);
-    header('location: login_student.php'); //redirect to login page
+    header('location: login.php'); //redirect to login page
     exit();	
   }
 }
@@ -29,12 +29,13 @@ if (isset($_POST['login'])) {
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
   if ($email != "" && $password != "") {
-    $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password'";
+    $password_encrypt = md5($password); // Password encryption before comparing with the database [Message Digest 5]
+    $query = "SELECT * FROM students WHERE email='$email' AND password='$password_encrypt'";
     $result = mysqli_query($db, $query);
     if (mysqli_num_rows($result)==1) {
-      $_SESSION['student'] = $email;
-      header('location: index.php'); //redirect to index page
-      exit();	
+        $_SESSION['student'] = $email;
+        header('location: index.php'); //redirect to index page
+        exit();	
     } else {
        echo '<script>alert("Invalid email and password!")</script>';
     }
