@@ -1,10 +1,9 @@
-<?php 
+<?php
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+    require '../PHPMailer/src/Exception.php';
+    require '../PHPMailer/src/PHPMailer.php';
+    require '../PHPMailer/src/SMTP.php';
 
     $db = mysqli_connect('localhost', 'root', '', 'smartshare');
     if(isset($_POST['submit'])) {
@@ -53,14 +52,14 @@
     <title>SMARTSHARE | FORGOT PASSWORD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
     <style>
         body {
             width: 30%;
-            background: url(img/background.svg) !important;
+            background: url(../img/background.svg) !important;
             margin: auto;
             margin-top: 100px;
         }
@@ -97,19 +96,19 @@
         <br>
         <div class="input-group mb-2">
             <div class="input-group-append">
-                <span class="input-group-text"><img src="img/id_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/id_icon.PNG" width="24"></span>
             </div>
             <input type="text" name="userid" class="form-control input_pass"  placeholder="Enter admin user id" required>
         </div>
         <div class="input-group mb-2">
             <div class="input-group-append">
-                <span class="input-group-text"><img src="img/user_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/user_icon.PNG" width="24"></span>
             </div>
             <input type="text" name="username" class="form-control input_pass"  placeholder="Enter admin username" required>
         </div>
         <div class="input-group mb-2">
             <div class="input-group-append">
-                <span class="input-group-text"><img src="img/email_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/email_icon.PNG" width="24"></span>
             </div>
             <input type="email" name="email" class="form-control input_pass"  placeholder="Enter your email address" required>
         </div>

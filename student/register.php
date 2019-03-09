@@ -1,4 +1,25 @@
-<?php include('server.php'); ?>
+<?php
+session_start();
+// Connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'smartshare');
+
+// If the register button is clicked
+if (isset($_POST['register'])) {
+    $en_no = mysqli_real_escape_string($db, $_POST['en_no']);
+    $name = mysqli_real_escape_string($db, $_POST['name']);
+    $email = mysqli_real_escape_string($db, $_POST['email']);
+    $mob_no = mysqli_real_escape_string($db, $_POST['mob_no']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
+
+  // If no errors, save the user's data to the database
+  if ($en_no != "" && $name != "" && $email != "" && $mob_no != "" && $password != "") {
+    $query = "INSERT INTO students (en_no, name, email, phone_no, password) VALUES ('$en_no', '$name', '$email', '$mob_no', '$password')";
+    mysqli_query($db, $query);
+    header('location: login.php'); //redirect to login page
+    exit();	
+  }
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -8,9 +29,9 @@
   <title>SMARTSHARE | REGISTER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Bootstrap 4 link-->
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <script src="bootstrap/jquery/jquery.min.js"></script>
-  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <script src="../bootstrap/jquery/jquery.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
 
   <style>
     body,
@@ -18,7 +39,7 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: url(img/background.svg) !important;
+      background: url(../img/background.svg) !important;
     }
 
     .user_card {
@@ -104,41 +125,41 @@
       <div class="user_card">
         <div class="d-flex justify-content-center">
           <div class="brand_logo_container">
-            <img src="img/logo.png" class="brand_logo" alt="Logo">
+            <img src="../img/logo.png" class="brand_logo" alt="Logo">
           </div>
         </div>
         <div class="d-flex justify-content-center form_container">
           <form method="POST">
             <div class="input-group mb-3">
               <div class="input-group-append">
-                <span class="input-group-text"><img src="img/id_icon.PNG" width="22"></span>
+                <span class="input-group-text"><img src="../img/id_icon.PNG" width="22"></span>
               </div>
               <input type="tel" name="en_no" class="form-control input_user" placeholder="Enrollment number" pattern="[1-2]{1}[0-9]{1}[0]{1}[1]{1}[1]{1}[3]{1}[0-9]{3}" oninvalid="this.setCustomValidity('Please enter computer department enrollment number!!')"
               oninput="this.setCustomValidity('')" maxlength="9" required>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-append">
-                <span class="input-group-text"><img src="img/user_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/user_icon.PNG" width="24"></span>
               </div>
               <input type="text" name="name" class="form-control input_user" placeholder="Name" required>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-append">
-                <span class="input-group-text"><img src="img/email_icon.PNG" width="22"></span>
+                <span class="input-group-text"><img src="../img/email_icon.PNG" width="22"></span>
               </div>
               <input type="email" name="email" pattern="[a-z0-9._%+-]+@gmail.com" size="30"  oninvalid="this.setCustomValidity('Please! Enter Gmail Id only')"
               oninput="this.setCustomValidity('')" class="form-control input_user" placeholder="Email address" required>
             </div>
             <div class="input-group mb-3">
               <div class="input-group-append">
-                <span class="input-group-text"><img src="img/phone_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/phone_icon.PNG" width="24"></span>
               </div>
               <input type="tel" name="mob_no" class="form-control input_user" placeholder="Mobile number" pattern="[7-9]{1}[0-9]{9}" oninvalid="this.setCustomValidity('Please enter vaild phone number!!')"
               oninput="this.setCustomValidity('')" maxlength="10" required>
             </div>
             <div class="input-group mb-2">
               <div class="input-group-append">
-                <span class="input-group-text"><img src="img/lock_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/lock_icon.PNG" width="24"></span>
               </div>
               <input type="password" name="password" pattern="/^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$/g" oninvalid="this.setCustomValidity('Your password should include At least 1 Uppercase,1 Lowercase,1 Number,1 Symbol.')"
               oninput="this.setCustomValidity('')" class="form-control input_pass" placeholder="Password" required>

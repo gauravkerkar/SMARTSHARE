@@ -1,4 +1,4 @@
-<?php include('session_admin.php'); ?>
+<?php include('session.php'); ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,12 +8,12 @@
     <title>SMARTSHARE | UPLOAD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <style>
         body {
-            background: url(img/background.svg) !important;
+            background: url(../img/background.svg) !important;
             background-size: contain;
         }
 
@@ -35,7 +35,7 @@
 </head>
 
 <body>
-    <?php include('navigation_admin.php'); ?>
+    <?php include('navigation.php'); ?>
     <div class="container">
         <form method="POST" enctype="multipart/form-data">
             <div class="form-group row mt-5">
@@ -69,7 +69,7 @@
         $description= $_POST['description'];
 
         if (isset($name)) {
-        $path= 'uploads/';
+        $path= 'upload/';
         
         if (!empty($name)){
         if (move_uploaded_file($tmp_name, $path.$name)) {

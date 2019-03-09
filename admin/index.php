@@ -1,4 +1,4 @@
-<?php include('session_admin.php'); ?>
+<?php include('session.php'); ?>
 <!DOCTYPE html>
 <html>
 
@@ -8,16 +8,17 @@
     <title>SMARTSHARE | HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
     <style>
         body {
-            background: url(img/background.svg) !important;
+            background: url(../img/background.svg) !important;
             background-size: contain;
         }
 
-        button.buttonsborder:hover {
+        a.buttonsborder:hover {
+            color: #000;
             border: 1px solid #0066fff1;
         }
 
@@ -30,6 +31,7 @@
             height: 80px;
             text-align: center;
             border: 1px solid #ddd;
+            color: #000;
             background-color: #f4f4f4;
             font-size: 1rem;
         }
@@ -63,37 +65,37 @@
 </head>
 
 <body>
-    <?php include('navigation_admin.php'); ?>
+    <?php include('navigation.php'); ?>
     <div class="container box-hero">
         <h4 class="box-body">View Files</h4>
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem1.png" class="sem"
-                        alt="sem1">Semester I</button>
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem1.png" class="sem"
+                        alt="sem1">Semester I</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem2.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem2.png" class="sem"
                         alt="sem2">Semester
-                    II</button>
+                    II</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem3.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem3.png" class="sem"
                         alt="sem3">Semester
-                    III</button>
+                    III</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem4.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem4.png" class="sem"
                         alt="sem4">Semester
-                    IV</button>
+                    IV</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app  buttonsborder" href=""><img src="./img/sem5.png" class="sem"
-                        alt="sem5">Semester V</button>
+                <a class="btn btn-app  buttonsborder" href=""><img src="../img/sem5.png" class="sem"
+                        alt="sem5">Semester V</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem6.png" class="sem"
-                        alt="sem6">Semester VI</button>
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem6.png" class="sem"
+                        alt="sem6">Semester VI</a>
             </div>
         </div>
     </div>
@@ -103,31 +105,31 @@
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem1.png" class="sem"
-                        alt="sem1">Semester I</button>
+                <a href="upload_semi.php" class="btn btn-app buttonsborder"><img src="../img/sem1.png" class="sem"
+                        alt="sem1">Semester I</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem2.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem2.png" class="sem"
                         alt="sem2">Semester
-                    II</button>
+                    II</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem3.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem3.png" class="sem"
                         alt="sem3">Semester
-                    III</button>
+                    III</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem4.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem4.png" class="sem"
                         alt="sem4">Semester
-                    IV</button>
+                    IV</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app  buttonsborder" href=""><img src="./img/sem5.png" class="sem"
-                        alt="sem5">Semester V</button>
+                <a class="btn btn-app  buttonsborder" href=""><img src="../img/sem5.png" class="sem"
+                        alt="sem5">Semester V</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem6.png" class="sem"
-                        alt="sem6">Semester VI</button>
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem6.png" class="sem"
+                        alt="sem6">Semester VI</a>
             </div>
         </div>
     </div>
@@ -137,31 +139,31 @@
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem1.png" class="sem"
-                        alt="sem1">Semester I</button>
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem1.png" class="sem"
+                        alt="sem1">Semester I</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem2.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem2.png" class="sem"
                         alt="sem2">Semester
-                    II</button>
+                    II</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem3.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem3.png" class="sem"
                         alt="sem3">Semester
-                    III</button>
+                    III</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem4.png" class="sem"
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem4.png" class="sem"
                         alt="sem4">Semester
-                    IV</button>
+                    IV</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app  buttonsborder" href=""><img src="./img/sem5.png" class="sem"
-                        alt="sem5">Semester V</button>
+                <a class="btn btn-app  buttonsborder" href=""><img src="../img/sem5.png" class="sem"
+                        alt="sem5">Semester V</a>
             </div>
             <div class="col-xs-6 col-md-2">
-                <button type="button" class="btn btn-app buttonsborder" href=""><img src="./img/sem6.png" class="sem"
-                        alt="sem6">Semester VI</button>
+                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem6.png" class="sem"
+                        alt="sem6">Semester VI</a>
             </div>
         </div>
     </div>

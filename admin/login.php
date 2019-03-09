@@ -1,16 +1,37 @@
-<?php include('server.php'); ?>
+<?php
+session_start();
+// Connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'smartshare');
+// Admin Login user
+if (isset($_POST['admin_login'])) {
+    $username = mysqli_real_escape_string($db, $_POST['username']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
+
+  if ($username != "" && $password != "") {
+    $query = "SELECT id FROM admin WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($db, $query);
+    if (mysqli_num_rows($result)==1) {
+        $_SESSION['admin'] = $username;
+        header('location: index.php'); //redirect to homepage page
+        exit();	
+    } else {
+        echo '<script>alert("Invalid username and password!")</script>';
+    }
+  }
+}
+?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | LOGIN</title>
+    <title>SMARTSHARE | ADMIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
     <script>
         function showpass() {
@@ -29,7 +50,7 @@
             margin: 0;
             padding: 0;
             height: 100%;
-            background: url(img/background.svg) !important;
+            background: url(../img/background.svg) !important;
         }
 
         .user_card {
@@ -114,21 +135,20 @@
             <div class="user_card">
                 <div class="d-flex justify-content-center">
                     <div class="brand_logo_container">
-                        <img src="img/logo.png" class="brand_logo" alt="Logo">
+                        <img src="../img/logo.png" class="brand_logo" alt="Logo">
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
                     <form method="POST">
                         <div class="input-group mb-3">
                             <div class="input-group-append">
-                                <span class="input-group-text"><img src="img/email_icon.PNG" width="20"></span>
+                                <span class="input-group-text"><img src="../img/user_icon.PNG" width="24"></span>
                             </div>
-                            <input type="email" name="email" class="form-control input_user"
-                                placeholder="Email address" required>
+                            <input type="text" name="username" class="form-control input_user" placeholder="Admin" required>
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
-                                <span class="input-group-text"><img src="img/lock_icon.PNG" width="24"></span>
+                                <span class="input-group-text"><img src="../img/lock_icon.PNG" width="24"></span>
                             </div>
                             <input type="password" name="password" class="form-control input_pass" id="pass"
                                 placeholder="Password" required>
@@ -137,24 +157,20 @@
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" onclick="showpass();"
                                     id="customControlInline">
-                                <label class="custom-control-label" for="customControlInline">Show password</label>
+                                <label class="custom-control-label" for="customControlInline">Show Password</label>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
-                            <input type="submit" name="login" class="btn login_btn" value="Login">
+                            <input type="submit" name="admin_login" class="btn login_btn" value="Login">
                         </div>
                     </form>
                 </div>
-                <div class="mt-4">
-                    <div class="d-flex justify-content-center links">
-                        Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
-                    </div>
-                    <div class="d-flex justify-content-center links">
-                        <a href="forgot_password_student.php" class="text-white">Forgot your password?</a>
-                    </div>
+                <div class="d-flex justify-content-center links">
+                    <a href="forgot_password.php" class="text-white">Forgot your password?</a>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 </body>
