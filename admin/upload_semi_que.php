@@ -31,7 +31,7 @@
         div.dropdown-menu.p-2 {
             width: max-content;
         }
-        
+
         .table-contain {
             padding: 1em 20em;
         }
@@ -89,9 +89,9 @@
     }
 
     if(!empty($description)) {
-    mysqli_query($db, "INSERT INTO sem_one_notes (file, description) VALUES ('$name', '$description')");
+    mysqli_query($db, "INSERT INTO sem_one_que (file, description) VALUES ('$name', '$description')");
 
-    $result = mysqli_query($db, "SELECT file, description FROM sem_one_notes ORDER BY id asc" ) or die("SELECT Error: ".mysql_error()); 
+    $result = mysqli_query($db, "SELECT file, description FROM sem_one_que ORDER BY id asc" ) or die("SELECT Error: ".mysql_error()); 
 
     print "<div class='table-contain'>\n"; 
     print "<table class='table table-sm table-dark table-hover table-bordered text-center'>\n";
@@ -102,7 +102,7 @@
     $descriptionvalue= $row['description'];
     echo "<tr><td>$descriptionvalue</td><td>$files_field</td></tr>";
     } 
-    print "</table>\n"; 
+    print "</table>\n";
 }
 ?>
 </body>
