@@ -2,9 +2,9 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
 
-    require 'PHPMailer/src/Exception.php';
-    require 'PHPMailer/src/PHPMailer.php';
-    require 'PHPMailer/src/SMTP.php';
+    require '../PHPMailer/src/Exception.php';
+    require '../PHPMailer/src/PHPMailer.php';
+    require '../PHPMailer/src/SMTP.php';
 
     $db = mysqli_connect('localhost', 'root', '', 'smartshare');
     if(isset($_POST['submit'])) {
@@ -22,8 +22,8 @@
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
     $mail->Username = '';               // SMTP username
     $mail->Password = '';                        // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `SSL` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to 587 = `TLS` or 465 = `SSL`
+    $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `SSL` also accepted
+    $mail->Port = 465;                                    // TCP port to connect to 587 = `TLS` or 465 = `SSL`
 
     //Recipients
     $mail->setFrom($_POST['email'], $_POST['en_no']);
@@ -52,14 +52,14 @@
     <title>SMARTSHARE | FORGOT PASSWORD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/jquery/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
 
     <style>
         body {
             width: 30%;
-            background: url(img/background.svg) !important;
+            background: url(../img/background.svg) !important;
             margin: auto;
             margin-top: 100px;
         }
@@ -96,13 +96,13 @@
         <br>
         <div class="input-group mb-2">
             <div class="input-group-append">
-                <span class="input-group-text"><img src="img/id_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/id_icon.PNG" width="24"></span>
             </div>
             <input type="text" name="en_no" class="form-control input_pass"  placeholder="Enter your enrollment number" required>
         </div>
         <div class="input-group mb-2">
             <div class="input-group-append">
-                <span class="input-group-text"><img src="img/email_icon.PNG" width="24"></span>
+                <span class="input-group-text"><img src="../img/email_icon.PNG" width="24"></span>
             </div>
             <input type="email" name="email" class="form-control input_pass"  placeholder="Enter your email address" required>
         </div>
