@@ -25,13 +25,13 @@
                         <?php
                         
                         $db = new PDO("mysql:host=localhost;dbname=smartshare","root","");
-                        $stmt = $db->prepare("select * from files");
+                        $stmt = $db->prepare("select * from sem_one_notes");
                         $stmt->execute();
                         while($row = $stmt->fetch()){
                         ?>
                         <tr>
                             <td><?php echo $row['id'] ?></td>
-                            <td><?php echo $row['filename'] ?></td>
+                            <td><?php echo $row['file'] ?></td>
                             <td class="text-center"><a href="download.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Download</a></td>
                         </tr>
                         <?php
