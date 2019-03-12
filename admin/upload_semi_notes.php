@@ -87,7 +87,7 @@
     if(!empty($description)) {
     mysqli_query($db, "INSERT INTO sem_one_notes (file, description) VALUES ('$name', '$description')");
 
-    $result = mysqli_query($db, "SELECT file, description FROM sem_one_notes ORDER BY id asc" ) or die("SELECT Error: ".mysql_error()); 
+    $result = mysqli_query($db, "SELECT file, description FROM sem_one_notes ORDER BY id asc" ) or die("SELECT Error: ".mysqli_error()); 
 
     print "<table border=1>\n"; 
     while ($row = mysqli_fetch_array($result)){ 
