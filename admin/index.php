@@ -70,30 +70,27 @@
         <h4 class="box-body">View Files</h4>
         <p class="margin"></p>
         <div class="row">
-            <div class="col-xs-6 col-md-2">
+            <div class="col-xs-6 col-md-6">
                 <a class="btn btn-app buttonsborder" href=""><img src="../img/sem1.png" class="sem"
                         alt="sem1">Semester I</a>
             </div>
-            <div class="col-xs-6 col-md-2">
+            <div class="col-xs-6 col-md-6">
                 <a class="btn btn-app buttonsborder" href=""><img src="../img/sem2.png" class="sem"
-                        alt="sem2">Semester
-                    II</a>
+                        alt="sem2">Semester II</a>
             </div>
-            <div class="col-xs-6 col-md-2">
+            <div class="col-xs-6 col-md-6">
                 <a class="btn btn-app buttonsborder" href=""><img src="../img/sem3.png" class="sem"
-                        alt="sem3">Semester
-                    III</a>
+                        alt="sem3">Semester III</a>
             </div>
-            <div class="col-xs-6 col-md-2">
+            <div class="col-xs-6 col-md-6">
                 <a class="btn btn-app buttonsborder" href=""><img src="../img/sem4.png" class="sem"
-                        alt="sem4">Semester
-                    IV</a>
+                        alt="sem4">Semester IV</a>
             </div>
-            <div class="col-xs-6 col-md-2">
+            <div class="col-xs-6 col-md-6">
                 <a class="btn btn-app  buttonsborder" href=""><img src="../img/sem5.png" class="sem"
                         alt="sem5">Semester V</a>
             </div>
-            <div class="col-xs-6 col-md-2">
+            <div class="col-xs-6 col-md-6">
                 <a class="btn btn-app buttonsborder" href=""><img src="../img/sem6.png" class="sem"
                         alt="sem6">Semester VI</a>
             </div>
