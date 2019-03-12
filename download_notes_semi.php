@@ -25,7 +25,7 @@
                         <?php
                         
                         $db = new PDO("mysql:host=localhost;dbname=smartshare","root","");
-                        $stmt = $db->prepare("select * from files");
+                        $stmt = $db->prepare("select * from newfiles");
                         $stmt->execute();
                         while($row = $stmt->fetch()){
                         ?>

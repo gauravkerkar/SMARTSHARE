@@ -8,17 +8,16 @@ if(isset($_GET['id'])){
     $stat->execute();
     $data = $stat->fetch();
 
-    $file = 'upload/'.$data['filename'];
+    $file = 'media/'.$data['filename'];
 
     if(file_exists($file)){
-        header('Content-Description: '. $data['description']);
-        header('Content-Type: '.$data['type']);
-        header('Content-Disposition: '.$data['disposition'].'; filename="'.basename($file).'"');
-        header('Expires: '.$data['expires']);
+        header('Content-Description:  File Transfer');
+        header('Content-Type:  application/octet-stream');
+        header('Expires: 0');
         header('Cache-Control: '.data['cache']);
-        header('Pragma: '.$data['pragma']);
-        header('Content-Length: '.filesize($file));
-        readfile($file);
-        exit;
+        header('Pragma: public');
+        header('Content-Length: '.filesize('admin/upload' . $file['name']);
+        readfile('admin/upload/' . $file['name']);
+       exit;
     }
 }
