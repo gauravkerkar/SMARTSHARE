@@ -171,7 +171,6 @@ if (isset($_POST['admin_login'])) {
             </div>
         </div>
     </div>
-    </div>
 
 </body>
 
