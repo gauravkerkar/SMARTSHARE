@@ -13,6 +13,7 @@
 <body>
 <p><br></p>
 <div class="container">
+    
         <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -32,7 +33,9 @@
                         <tr>
                             <td><?php echo $row['id'] ?></td>
                             <td><?php echo $row['file'] ?></td>
-                            <td class="text-center"><a href="admin/upload/<?php echo $row['file'] ?>" download class="btn btn-primary">Download</a></td>
+                            <td class="text-center"><a href="admin/upload/<?php echo $row['file'] ?>" download class="btn btn-primary">Download</a>
+                                
+                                <form method="POST" action="delete.php"><input type="submit" name="del" value="Delete"></form></td>
                         </tr>
                         <?php
                 }
