@@ -32,7 +32,7 @@
                         <tr>
                             <td><?php echo $row['id'] ?></td>
                             <td><?php echo $row['file'] ?></td>
-                            <td class="text-center"><a href="download.php?id=<?php echo $row['id'] ?>" class="btn btn-primary">Download</a></td>
+                            <td class="text-center"><a href="admin/upload/<?php echo $row['file'] ?>" download class="btn btn-primary">Download</a></td>
                         </tr>
                         <?php
                 }
