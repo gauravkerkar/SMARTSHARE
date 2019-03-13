@@ -8,13 +8,13 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown bg-dark">
                     <a href="" class="nav-link dropdown-toggle" id="navbarDropdownAccount" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu p-2 bg-dark text-white border-primary" aria-labelledby="navbarDropdownAccount">
-                        <section class="text-center"><img src="../img/download.jpg" width="80" height="80" alt="user_icon">
+                        <section class="text-center"><img src="../img/user_img.jpg" width="80" height="80" alt="user_icon">
                         </section>
                         <b>Name :</b> <?php echo $row['name']; ?><br>
                         <b>En No. :</b> <?php echo $row['en_no']; ?><br>
