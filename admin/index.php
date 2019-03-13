@@ -60,6 +60,7 @@
 
         div.dropdown-menu.p-2 {
             width: max-content;
+            height:12.4rem;
         }
         div .sam{
             width: 158px;
