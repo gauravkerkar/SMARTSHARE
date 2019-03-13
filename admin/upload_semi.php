@@ -49,8 +49,6 @@
             <div class="col"><a href="upload_semi_notes.php" data-toggle="tooltip" title="Notes"><img
                         src="../img/notes.png"></a>
             </div>
-            <div class="col"><a href="upload_semi_notice.php" data-toggle="tooltip" title="Notice"><img src="../img/notice.png"></a>
-            </div>
             <div class="col"><a href="upload_semi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
             </div>
             <div class="col"><a href="upload_semi_que.php" data-toggle="tooltip" title="Question Papers"><img
