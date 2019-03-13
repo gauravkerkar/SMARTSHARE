@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/jquery/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: url(../img/background.svg) !important;
+        }
+    </style>
 </head>
 <body>
 <p><br></p>
@@ -32,7 +41,7 @@
                         <tr>
                             <td><?php echo $row['id'] ?></td>
                             <td><?php echo $row['file'] ?></td>
-                            <td class="text-center"><a href="admin/upload/<?php echo $row['file'] ?>" class="btn btn-primary" download>Download</a></td>
+                            <td class="text-center"><a href="../admin/upload/<?php echo $row['file'] ?>" class="btn btn-primary" download>Download</a></td>
                         </tr>
                         <?php
                 }

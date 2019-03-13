@@ -71,7 +71,7 @@
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem1.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="download_semi_notes.php"><img src="../img/sem1.png" class="sem"
                         alt="sem1">Semester I</a>
             </div>
             <div class="col-xs-6 col-md-2">
