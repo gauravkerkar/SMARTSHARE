@@ -79,23 +79,23 @@
                         alt="sem1">Semester I</a>
             </div>
             <div class="col-xs-4 col-sm-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem2.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="view_semii.php"><img src="../img/sem2.png" class="sem"
                         alt="sem2">Semester II</a>
             </div>
             <div class="col-xs-4 col-sm-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem3.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="view_semiii.php"><img src="../img/sem3.png" class="sem"
                         alt="sem3">Semester III</a>
             </div>
             <div class="col-xs-4 col-sm-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem4.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="view_semiv.php"><img src="../img/sem4.png" class="sem"
                         alt="sem4">Semester IV</a>
             </div>
             <div class="col-xs-4 col-sm-2 sam">
-                <a class="btn btn-app  buttonsborder" href=""><img src="../img/sem5.png" class="sem"
+                <a class="btn btn-app  buttonsborder" href="view_semv.php"><img src="../img/sem5.png" class="sem"
                         alt="sem5">Semester V</a>
             </div>
             <div class="col-xs-4 col-sm-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem6.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="view_semvi.php"><img src="../img/sem6.png" class="sem"
                         alt="sem6">Semester VI</a>
             </div>
         </div>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$err="";
 // Connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'smartshare');
 
@@ -10,13 +11,13 @@ if (isset($_POST['login'])) {
 
   if ($email != "" && $password != "") {
     $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($db, $query);
+    $result = mysqli_query($db, $query) or die(mysqli_error($db));
     if (mysqli_num_rows($result)==1) {
       $_SESSION['student'] = $email;
       header('location: index.php'); //redirect to index page
       exit();	
     } else {
-       echo '<script>alert("Invalid email and password!")</script>';
+       $err = "Incorrect username and password!";
     }
   }
 }
@@ -162,6 +163,7 @@ if (isset($_POST['login'])) {
                                     id="customControlInline">
                                 <label class="custom-control-label" for="customControlInline">Show password</label>
                             </div>
+                            <strong><?php echo $err; ?></strong>
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input type="submit" name="login" class="btn login_btn" value="Login">

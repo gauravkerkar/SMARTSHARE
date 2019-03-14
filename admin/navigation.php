@@ -18,6 +18,8 @@
                                 alt="user_icon"></section>
                         <b>Admin Id :</b> <?php echo $row['id']; ?><br>
                         <b>Admin Username :</b> <?php echo $row['username']; ?><br><br>
+                        <a href="" class="float-left text-white" data-toggle="modal" data-target="#myModal">Update
+                            details</a>
                         <form method="GET"><input type="submit" class="btn btn-primary btn-sm float-right" name="logout"
                                 value="Logout"></form>
                     </div>
@@ -41,3 +43,37 @@
         </div>
     </nav>
 </div>
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Update details</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <form method="POST">
+                <div class="modal-body">
+                    <input type="tel" name="id" class="form-control" value="<?php echo $row['id']; ?>"><br>
+                    <input type="text" name="name" class="form-control" value="<?php echo $row['username']; ?>"><br>
+                    <input type="password" name="pwd" class="form-control" value="<?php echo $row['password']; ?>">
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" name="update" class="btn btn-primary" value="Update">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<?php
+    $db = mysqli_connect('localhost', 'root', '', 'smartshare');
+
+    if(isset($_POST['update'])) {
+        $id = mysqli_real_escape_string($db, $_POST['id']);
+        $name = mysqli_real_escape_string($db, $_POST['name']);
+        $pwd = mysqli_real_escape_string($db, $_POST['pwd']);
+        $sql = "UPDATE admin SET id='$id', username='$name', password='$pwd' WHERE id='{$row['id']}'";
+        $res = mysqli_query($db, $sql) or die(mysqli_error($db));
+    }
+?>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$err="";
 // Connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'smartshare');
 // Admin Login user
@@ -15,7 +16,7 @@ if (isset($_POST['admin_login'])) {
         header('location: index.php'); //redirect to homepage page
         exit();	
     } else {
-        echo '<script>alert("Invalid username and password!")</script>';
+        $err = "Incorrect username and password!";
     }
   }
 }
@@ -159,6 +160,7 @@ if (isset($_POST['admin_login'])) {
                                     id="customControlInline">
                                 <label class="custom-control-label" for="customControlInline">Show Password</label>
                             </div>
+                            <strong><?php echo $err; ?></strong>
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input type="submit" name="admin_login" class="btn login_btn" value="Login">
