@@ -15,6 +15,9 @@
             background: url(../img/background.svg) !important;
             background-size: contain;
         }
+        div.dropdown-menu.p-2 {
+            width: max-content;
+        }
     </style>
 </head>
 <body>
@@ -41,15 +44,13 @@
                             <td><?php echo $row['file'] ?></td>
                             <td class="text-center"><a href="../upload/<?php echo $row['file'] ?>" class="btn btn-primary btn-sm" download>Download</a>
                             <?php 
-                            if(isset($_GET["action"]))  {  
-                                if($_GET["action"] == "delete")  {  
+                            if(isset($_GET["id"]))  {
                                 $id = $_GET['id'];
                                 $sql = "DELETE FROM sem_one_notes WHERE id='$id'";
                                 mysqli_query($db, $sql);
                                 }
-                            }
                             ?>
-                            <a href="view_semi_notes.php?action=delete&id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Delete</a>
+                            <a href="view_semi_notes.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Delete</a>
                             </td>
                         </tr>
                         <?php

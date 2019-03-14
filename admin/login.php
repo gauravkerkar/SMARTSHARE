@@ -26,7 +26,7 @@ if (isset($_POST['admin_login'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | ADMIN</title>
+    <title>ADMIN | LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -167,6 +167,9 @@ if (isset($_POST['admin_login'])) {
                 </div>
                 <div class="d-flex justify-content-center links">
                     <a href="forgot_password.php" class="text-white">Forgot your password?</a>
+                </div>
+                <div class="d-flex justify-content-center links">
+                    <a href="../student/login.php" class="text-white">Student login</a>
                 </div>
             </div>
         </div>
