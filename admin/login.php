@@ -144,7 +144,7 @@ if (isset($_POST['admin_login'])) {
                             <div class="input-group-append">
                                 <span class="input-group-text"><img src="../img/user_icon.PNG" width="24"></span>
                             </div>
-                            <input type="text" name="username" class="form-control input_user" placeholder="Admin" required>
+                            <input type="text" name="username" class="form-control input_user" placeholder="Username" required>
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
@@ -165,7 +165,7 @@ if (isset($_POST['admin_login'])) {
                         </div>
                     </form>
                 </div>
-                <div class="d-flex justify-content-center links">
+                <div class="d-flex justify-content-center links py-2">
                     <a href="forgot_password.php" class="text-white">Forgot your password?</a>
                 </div>
                 <div class="d-flex justify-content-center links">

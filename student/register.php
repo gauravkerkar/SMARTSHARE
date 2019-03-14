@@ -26,7 +26,7 @@ if (isset($_POST['register'])) {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SMARTSHARE | REGISTER</title>
+  <title>STUDENT | REGISTER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--Bootstrap 4 link-->
   <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -167,6 +167,9 @@ if (isset($_POST['register'])) {
         </div>
         <div class="d-flex justify-content-center mt-3 login_container">
           <input type="submit" name="register" class="btn login_btn" value="Register">
+        </div>
+        <div class="d-flex justify-content-center links py-2">
+            Already have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
         </div>
         </form>
       </div>

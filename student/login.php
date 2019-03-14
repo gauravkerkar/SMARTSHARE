@@ -28,7 +28,7 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | LOGIN</title>
+    <title>STUDENT | LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -166,15 +166,16 @@ if (isset($_POST['login'])) {
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input type="submit" name="login" class="btn login_btn" value="Login">
                         </div>
+                        <div class="d-flex justify-content-center links py-2">
+                            Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center links">
+                            <a href="forgot_password.php" class="text-white">Forgot your password?</a>
+                        </div>
+                        <div class="d-flex justify-content-center links pt-2">
+                            <a href="../admin/login.php" class="text-white">Admin login</a>
+                        </div>
                     </form>
-                </div>
-                <div class="mt-4">
-                    <div class="d-flex justify-content-center links">
-                        Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
-                    </div>
-                    <div class="d-flex justify-content-center links">
-                        <a href="forgot_password.php" class="text-white">Forgot your password?</a>
-                    </div>
                 </div>
             </div>
         </div>

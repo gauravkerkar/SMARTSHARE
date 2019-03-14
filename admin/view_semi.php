@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | SEM I</title>
+    <title>SEM I | VIEW FILES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -49,9 +49,9 @@
             <div class="col"><a href="view_semi_notes.php" data-toggle="tooltip" title="Notes"><img
                         src="../img/notes.png"></a>
             </div>
-            <div class="col"><a href="upload_semi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
+            <div class="col"><a href="view_semi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
             </div>
-            <div class="col"><a href="upload_semi_que.php" data-toggle="tooltip" title="Question Papers"><img
+            <div class="col"><a href="view_semi_que.php" data-toggle="tooltip" title="Question Papers"><img
                         src="../img/question.png"></a></div>
         </div>
     </div>
