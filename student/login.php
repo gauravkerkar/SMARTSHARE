@@ -1,5 +1,6 @@
 <?php
 session_start();
+$err="";
 // Connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'smartshare');
 
@@ -10,13 +11,13 @@ if (isset($_POST['login'])) {
 
   if ($email != "" && $password != "") {
     $query = "SELECT en_no FROM students WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($db, $query);
+    $result = mysqli_query($db, $query) or die(mysqli_error($db));
     if (mysqli_num_rows($result)==1) {
       $_SESSION['student'] = $email;
       header('location: index.php'); //redirect to index page
       exit();	
     } else {
-       echo '<script>alert("Invalid email and password!")</script>';
+       $err = "Incorrect username and password!";
     }
   }
 }
@@ -28,7 +29,7 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | LOGIN</title>
+    <title>STUDENT | LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -162,19 +163,21 @@ if (isset($_POST['login'])) {
                                     id="customControlInline">
                                 <label class="custom-control-label" for="customControlInline">Show password</label>
                             </div>
+                            <strong><?php echo $err; ?></strong>
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input type="submit" name="login" class="btn login_btn" value="Login">
                         </div>
+                        <div class="d-flex justify-content-center links py-2">
+                            Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
+                        </div>
+                        <div class="d-flex justify-content-center links">
+                            <a href="forgot_password.php" class="text-white">Forgot your password?</a>
+                        </div>
+                        <div class="d-flex justify-content-center links pt-2">
+                            <a href="../admin/login.php" class="text-white">Admin login</a>
+                        </div>
                     </form>
-                </div>
-                <div class="mt-4">
-                    <div class="d-flex justify-content-center links">
-                        Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
-                    </div>
-                    <div class="d-flex justify-content-center links">
-                        <a href="forgot_password.php" class="text-white">Forgot your password?</a>
-                    </div>
                 </div>
             </div>
         </div>

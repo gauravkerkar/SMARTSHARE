@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | UPLOAD</title>
+    <title>SEM I | UPLOAD NOTES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -73,7 +73,7 @@
         $description= $_POST['description'];
 
         if (isset($name)) {
-        $path= 'upload/';
+        $path= '../upload/';
         
         if (!empty($name)){
         if (move_uploaded_file($tmp_name, $path.$name)) {
@@ -91,7 +91,7 @@
     if(!empty($description)) {
     mysqli_query($db, "INSERT INTO sem_one_notes (file, description) VALUES ('$name', '$description')");
 
-    $result = mysqli_query($db, "SELECT file, description FROM sem_one_notes ORDER BY id asc" ) or die("SELECT Error: ".mysql_error()); 
+    $result = mysqli_query($db, "SELECT file, description FROM sem_one_notes ORDER BY id asc" ) or die("SELECT Error: ".mysqli_error()); 
 
     print "<div class='table-contain'>\n"; 
     print "<table class='table table-sm table-dark table-hover table-bordered text-center'>\n";
