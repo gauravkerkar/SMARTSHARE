@@ -134,6 +134,18 @@
             </div>
         </div>
     </div>
+    <div class="container box-hero pull-left"style="
+    width: 200px;">
+            <h4 class="box-body">Upload Notices</h4>
+            <p class="margin"></p>
+            <div class="row">
+                <div class="col-xs-6 col-md-2" style="
+                padding-left: 27px;">
+                    <a class="btn btn-app buttonsborder" href=""><img src="../img/sem1.png" class="sem"
+                            alt="sem1">Semester I</a>
+                </div>
+                </div>
+                </div>
 </body>
 
 </html>

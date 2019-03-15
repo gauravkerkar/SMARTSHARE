@@ -65,6 +65,13 @@
         div .sam{
             width: 158px;
         }
+     
+        /* Make the image fully responsive */
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
+        }
+       
 
     </style>
 </head>
@@ -104,7 +111,48 @@
             </div>
         </div>
     </div>
-
+      <div class="container">
+      <div id="demo" class="carousel slide" data-ride="carousel">
+      
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner bg-dark">
+                <?php
+                $db = new PDO("mysql:host=localhost;dbname=smartshare","root","");
+                $stmt = $db->prepare("select * from notice");
+                $stmt->execute();
+                while($row = $stmt->fetch()){
+                ?>
+          <div class="carousel-item active">
+            <img src="../upload/<?php echo $row['file'] ?>" alt="Los Angeles" width="1100" height="200">
+          </div>
+          <div class="carousel-item">
+            <img src="../upload/<?php echo $row['file'] ?>" alt="Chicago" width="100px" height="200px">
+          </div>
+          <div class="carousel-item">
+            <img src="../upload/<?php echo $row['file'] ?>" alt="New York" width="1100" height="200">
+          </div>
+          <?php
+                }
+                ?>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+      
+</div>
 </body>
 
 </html>
