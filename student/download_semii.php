@@ -1,0 +1,61 @@
+<?php include('session.php'); ?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SEM II | DOWNLOAD FILES</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Bootstrap 4 link-->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/jquery/jquery.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    body {
+            background: url(../img/background.svg) !important;
+            background-size: contain;
+        }
+
+        .box-hero {
+            position: relative;
+            border-radius: 8px;
+            margin-top: 30px;
+            background: #ffffff;
+            border-top: 3px solid #3c8dbc;
+            margin-bottom: 20px;
+
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        div.dropdown-menu.p-2 {
+            width: max-content;
+        }
+
+    .sem {
+        padding: 50px;
+        text-align: center;
+
+    }
+</style>
+
+<body>
+    <?php include('navigation.php'); ?>
+    <div class="sem">
+        <h1 class="text-center text-white pb-5" style="font-family:'Times New Roman', Times, serif">SEMESTER II</h1>
+        <div class="row">
+            <div class="col"><a href="download_semii_notes.php" data-toggle="tooltip" title="Notes"><img
+                        src="../img/notes.png"></a>
+            </div>
+            <div class="col"><a href="download_semii_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
+            </div>
+            <div class="col"><a href="download_semii_que.php" data-toggle="tooltip" title="Question Papers"><img
+                        src="../img/question.png"></a></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
