@@ -1,4 +1,11 @@
 <?php include('session.php'); ?>
+<?php
+  // Create database connection
+  $db = mysqli_connect("localhost", "root", "", "smartshare");
+
+ 
+  $result = mysqli_query($db, "SELECT * FROM notice order by id  desc");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -65,14 +72,38 @@
         div .sam{
             width: 158px;
         }
-     
-        /* Make the image fully responsive */
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
-       
-
+        #img_div{
+   	width: 80%;
+   	padding: 5px;
+   	margin: 15px auto;
+   	border: 1px solid #cbcbcb;
+   }
+   #img_div:after{
+   	content: "";
+   	display: block;
+   	clear: both;
+   }
+   #image-id{
+   	float: left;
+   	margin: 5px;
+   	width: 300px;
+   	height: 140px;
+   }
+   #content{
+   	width: 50%;
+   	margin: 20px auto;
+   	border: 1px solid #cbcbcb;
+       background: rgba(233, 201, 57, 0.425);
+   }
+   .notice{
+       background: rgba(17, 17, 17, 0.24);
+       border-top: 7px solid rgb(69, 150, 243);
+       border-radius:10px;
+       border-bottom: 7px solid rgb(56, 20, 255); 
+   }
+   h3{
+       border-bottom: 2px solid whitesmoke;
+   }
     </style>
 </head>
 
@@ -111,48 +142,18 @@
             </div>
         </div>
     </div>
-      <div class="container">
-      <div id="demo" class="carousel slide" data-ride="carousel">
-      
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-          <li data-target="#demo" data-slide-to="0" class="active"></li>
-          <li data-target="#demo" data-slide-to="1"></li>
-          <li data-target="#demo" data-slide-to="2"></li>
-        </ul>
-        
-        <!-- The slideshow -->
-        <div class="carousel-inner bg-dark">
-                <?php
-                $db = new PDO("mysql:host=localhost;dbname=smartshare","root","");
-                $stmt = $db->prepare("select * from notice");
-                $stmt->execute();
-                while($row = $stmt->fetch()){
-                ?>
-          <div class="carousel-item active">
-            <img src="../upload/<?php echo $row['file'] ?>" alt="Los Angeles" width="1100" height="200">
+    <div class="container notice"><h3 class="text-white">NOTICES</h3>
+    <div id="content">
+            <?php
+              while ($row = mysqli_fetch_array($result)) {
+                echo "<div id='img_div'>";
+                    echo "<a href='../notice/".$row['image']."' download><img id='image-id' src='../notice/".$row['image']."' ></a>";
+                    echo "<p>".$row['image_txt']."</p>";
+                echo "</div>";
+              }
+            ?>
           </div>
-          <div class="carousel-item">
-            <img src="../upload/<?php echo $row['file'] ?>" alt="Chicago" width="100px" height="200px">
-          </div>
-          <div class="carousel-item">
-            <img src="../upload/<?php echo $row['file'] ?>" alt="New York" width="1100" height="200">
-          </div>
-          <?php
-                }
-                ?>
         </div>
-        
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#demo" data-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#demo" data-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </a>
-      </div>
-      
-</div>
 </body>
 
 </html>
