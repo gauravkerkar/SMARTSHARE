@@ -1,9 +1,7 @@
-<?php include('session.php'); ?>
 <?php
+    include('session.php');
   // Create database connection
   $db = mysqli_connect("localhost", "root", "", "smartshare");
-
- 
   $result = mysqli_query($db, "SELECT * FROM notice order by id  desc");
 ?>
 <!DOCTYPE html>
@@ -14,10 +12,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>STUDENT | HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <script src="../bootstrap/jquery/jquery.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!--Bootstrap 4 CDN link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <style>
         body {
             background: url(../img/background.svg) !important;
@@ -147,7 +146,7 @@
             <?php
               while ($row = mysqli_fetch_array($result)) {
                 echo "<div id='img_div'>";
-                    echo "<a href='../notice/".$row['image']."' download><img id='image-id' src='../notice/".$row['image']."' ></a>";
+                    echo "<a href='../notice/".$row['image']."' download><img id='image-id' class='img-fluid' src='../notice/".$row['image']."' ></a>";
                     echo "<p>".$row['image_txt']."</p>";
                 echo "</div>";
               }
