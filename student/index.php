@@ -1,4 +1,11 @@
 <?php include('session.php'); ?>
+<?php
+  // Create database connection
+  $db = mysqli_connect("localhost", "root", "", "smartshare");
+
+ 
+  $result = mysqli_query($db, "SELECT * FROM notice order by id  desc");
+?>
 <!DOCTYPE html>
 <html>
 
@@ -65,7 +72,38 @@
         div .sam{
             width: 158px;
         }
-
+        #img_div{
+   	width: 80%;
+   	padding: 5px;
+   	margin: 15px auto;
+   	border: 1px solid #cbcbcb;
+   }
+   #img_div:after{
+   	content: "";
+   	display: block;
+   	clear: both;
+   }
+   #image-id{
+   	float: left;
+   	margin: 5px;
+   	width: 300px;
+   	height: 140px;
+   }
+   #content{
+   	width: 50%;
+   	margin: 20px auto;
+   	border: 1px solid #cbcbcb;
+       background: rgba(233, 201, 57, 0.425);
+   }
+   .notice{
+       background: rgba(17, 17, 17, 0.24);
+       border-top: 7px solid rgb(69, 150, 243);
+       border-radius:10px;
+       border-bottom: 7px solid rgb(56, 20, 255); 
+   }
+   h3{
+       border-bottom: 2px solid whitesmoke;
+   }
     </style>
 </head>
 
@@ -104,7 +142,18 @@
             </div>
         </div>
     </div>
-
+    <div class="container notice"><h3 class="text-white">NOTICES</h3>
+    <div id="content">
+            <?php
+              while ($row = mysqli_fetch_array($result)) {
+                echo "<div id='img_div'>";
+                    echo "<a href='../notice/".$row['image']."' download><img id='image-id' src='../notice/".$row['image']."' ></a>";
+                    echo "<p>".$row['image_txt']."</p>";
+                echo "</div>";
+              }
+            ?>
+          </div>
+        </div>
 </body>
 
 </html>
