@@ -134,6 +134,19 @@
             </div>
         </div>
     </div>
+    <div class="container box-hero pull-left"style="
+    width: 200px;">
+            <h4 class="box-body">Upload Notices</h4>
+            <p class="margin"></p>
+            <div class="row">
+                <div class="col-xs-6 col-md-2" style="
+                padding-left: 27px;">
+                        <a href="upload_notice.php" class="btn btn-app buttonsborder"><img src="../img/sem1.png" class="sem"
+                                alt="sem1">Semester I</a>
+                    </div>
+                </div>
+                </div>
+                </div>
 </body>
 
 </html>
