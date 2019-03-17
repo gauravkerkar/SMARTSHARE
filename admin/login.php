@@ -1,5 +1,6 @@
 <?php
 session_start();
+$err="";
 // Connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'smartshare');
 // Admin Login user
@@ -15,7 +16,7 @@ if (isset($_POST['admin_login'])) {
         header('location: index.php'); //redirect to homepage page
         exit();	
     } else {
-        echo '<script>alert("Invalid username and password!")</script>';
+        $err = "Incorrect username and password!";
     }
   }
 }
@@ -26,7 +27,7 @@ if (isset($_POST['admin_login'])) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | ADMIN</title>
+    <title>ADMIN | LOGIN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -144,7 +145,7 @@ if (isset($_POST['admin_login'])) {
                             <div class="input-group-append">
                                 <span class="input-group-text"><img src="../img/user_icon.PNG" width="24"></span>
                             </div>
-                            <input type="text" name="username" class="form-control input_user" placeholder="Admin" required>
+                            <input type="text" name="username" class="form-control input_user" placeholder="Username" required>
                         </div>
                         <div class="input-group mb-2">
                             <div class="input-group-append">
@@ -159,14 +160,18 @@ if (isset($_POST['admin_login'])) {
                                     id="customControlInline">
                                 <label class="custom-control-label" for="customControlInline">Show Password</label>
                             </div>
+                            <strong><?php echo $err; ?></strong>
                         </div>
                         <div class="d-flex justify-content-center mt-3 login_container">
                             <input type="submit" name="admin_login" class="btn login_btn" value="Login">
                         </div>
                     </form>
                 </div>
-                <div class="d-flex justify-content-center links">
+                <div class="d-flex justify-content-center links py-2">
                     <a href="forgot_password.php" class="text-white">Forgot your password?</a>
+                </div>
+                <div class="d-flex justify-content-center links">
+                    <a href="../student/login.php" class="text-white">Student login</a>
                 </div>
             </div>
         </div>

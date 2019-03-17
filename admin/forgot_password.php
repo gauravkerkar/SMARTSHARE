@@ -49,7 +49,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | FORGOT PASSWORD</title>
+    <title>ADMIN | FORGOT PASSWORD</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -150,27 +150,30 @@
                         </div>
                         <div class="d-flex justify-content-center form_container">
                             <form method="POST">
-                                <p class="display-5 text-center"><b>FORGOT PASSWORD</b></p>
-                                <div class="input-group mb-3">
+                                <h5 class="text-center text-white pb-2">FORGOT PASSWORD</h5>
+                                <div class="input-group mb-2">
                                         <div class="input-group-append">
                                                 <span class="input-group-text"><img src="../img/id_icon.PNG" width="24"></span>
                                             </div>
-                                            <input type="text" name="userid" class="form-control input_pass"  placeholder="Enter admin user id" required>
+                                            <input type="text" name="userid" class="form-control input_pass"  placeholder="User id" required>
                                         </div>
                                         <div class="input-group mb-2">
                                                 <div class="input-group-append">
                                                     <span class="input-group-text"><img src="../img/user_icon.PNG" width="24"></span>
                                                 </div>
-                                                <input type="text" name="username" class="form-control input_pass"  placeholder="Enter admin username" required>
+                                                <input type="text" name="username" class="form-control input_pass"  placeholder="Username" required>
                                             </div>
                                             <div class="input-group mb-2">
                                                     <div class="input-group-append">
                                                         <span class="input-group-text"><img src="../img/email_icon.PNG" width="24"></span>
                                                     </div>
-                                                    <input type="email" name="email" class="form-control input_pass"  placeholder="Enter email address" required>
+                                                    <input type="email" name="email" class="form-control input_pass"  placeholder="Email address" required>
                                                 </div>
                                                 <div class="d-flex justify-content-center mt-3 login_container">
                                                         <input type="submit" name="submit" class="btn login_btn" value="Submit">
+                                                    </div>
+                                                    <div class="d-flex justify-content-center links pt-2">
+                                                        <a href="login.php" class="text-white">Back to login</a>
                                                     </div>
                             </form>
                         </div>

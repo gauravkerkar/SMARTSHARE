@@ -12,7 +12,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | INDEX</title>
+    <title>STUDENT | HOMEPAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -114,30 +114,30 @@
         <p class="margin"></p>
         <div class="row">
             <div class="col-xs-6 col-md-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem1.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="download_semi.php"><img src="../img/sem1.png" class="sem"
                         alt="sem1">Semester I</a>
             </div>
             <div class="col-xs-6 col-md-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem2.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="download_semii.php"><img src="../img/sem2.png" class="sem"
                         alt="sem2">Semester
                     II</a>
             </div>
             <div class="col-xs-6 col-md-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem3.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="download_semiii.php"><img src="../img/sem3.png" class="sem"
                         alt="sem3">Semester
                     III</a>
             </div>
             <div class="col-xs-6 col-md-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem4.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="download_semiv.php"><img src="../img/sem4.png" class="sem"
                         alt="sem4">Semester
                     IV</a>
             </div>
             <div class="col-xs-6 col-md-2 sam">
-                <a class="btn btn-app  buttonsborder" href=""><img src="../img/sem5.png" class="sem"
+                <a class="btn btn-app  buttonsborder" href="download_semv.php"><img src="../img/sem5.png" class="sem"
                         alt="sem5">Semester V</a>
             </div>
             <div class="col-xs-6 col-md-2 sam">
-                <a class="btn btn-app buttonsborder" href=""><img src="../img/sem6.png" class="sem"
+                <a class="btn btn-app buttonsborder" href="download_semvi.php"><img src="../img/sem6.png" class="sem"
                         alt="sem6">Semester VI</a>
             </div>
         </div>

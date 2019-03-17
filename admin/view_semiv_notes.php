@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SEM I | VIEW NOTES</title>
+    <title>SEM IV | VIEW NOTES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -35,7 +35,7 @@
                 <tbody>
                         <?php
                         $db = mysqli_connect('localhost', 'root', '', 'smartshare');
-                        $query = "SELECT * FROM sem_one_notes";
+                        $query = "SELECT * FROM sem_four_notes";
                         $result = mysqli_query($db, $query);
                         while($row = mysqli_fetch_array($result)){
                         ?>
@@ -46,11 +46,11 @@
                             <?php 
                             if(isset($_GET["id"]))  {
                                 $id = $_GET['id'];
-                                $sql = "DELETE FROM sem_one_notes WHERE id='$id'";
+                                $sql = "DELETE FROM sem_four_notes WHERE id='$id'";
                                 mysqli_query($db, $sql);
                                 }
                             ?>
-                            <a href="view_semi_notes.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Delete</a>
+                            <a href="view_semiv_notes.php?id=<?php echo $row['id']; ?>" class="btn btn-primary btn-sm">Delete</a>
                             </td>
                         </tr>
                         <?php

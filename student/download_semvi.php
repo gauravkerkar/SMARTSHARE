@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SEM I | UPLOAD</title>
+    <title>SEM VI | DOWNLOAD FILES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -34,7 +34,7 @@
             width: max-content;
         }
 
-    .sem1 {
+    .sem {
         padding: 50px;
         text-align: center;
 
@@ -43,15 +43,15 @@
 
 <body>
     <?php include('navigation.php'); ?>
-    <div class="sem1">
-        <h1 class="text-center text-white pb-5" style="font-family:'Times New Roman', Times, serif">SEMESTER I</h1>
+    <div class="sem">
+        <h1 class="text-center text-white pb-5" style="font-family:'Times New Roman', Times, serif">SEMESTER VI</h1>
         <div class="row">
-            <div class="col"><a href="upload_semi_notes.php" data-toggle="tooltip" title="Notes"><img
+            <div class="col"><a href="download_semvi_notes.php" data-toggle="tooltip" title="Notes"><img
                         src="../img/notes.png"></a>
             </div>
-            <div class="col"><a href="upload_semi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
+            <div class="col"><a href="download_semvi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
             </div>
-            <div class="col"><a href="upload_semi_que.php" data-toggle="tooltip" title="Question Papers"><img
+            <div class="col"><a href="download_semvi_que.php" data-toggle="tooltip" title="Question Papers"><img
                         src="../img/question.png"></a></div>
         </div>
     </div>

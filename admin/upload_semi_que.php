@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | UPLOAD</title>
+    <title>SEM I | UPLOAD QUESTION PAPERS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -73,7 +73,7 @@
         $description= $_POST['description'];
 
         if (isset($name)) {
-        $path= 'upload/';
+        $path= '../upload/';
         
         if (!empty($name)){
         if (move_uploaded_file($tmp_name, $path.$name)) {

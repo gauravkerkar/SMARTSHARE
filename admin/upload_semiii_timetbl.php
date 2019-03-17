@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SEM I | UPLOAD TIMETABLE</title>
+    <title>SEM III | UPLOAD TIMETABLE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 link-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
@@ -89,9 +89,9 @@
     }
 
     if(!empty($description)) {
-    mysqli_query($db, "INSERT INTO sem_one_timetbl (file, description) VALUES ('$name', '$description')");
+    mysqli_query($db, "INSERT INTO sem_three_timetbl (file, description) VALUES ('$name', '$description')");
 
-    $result = mysqli_query($db, "SELECT file, description FROM sem_one_timetbl ORDER BY id asc" ) or die("SELECT Error: ".mysql_error()); 
+    $result = mysqli_query($db, "SELECT file, description FROM sem_three_timetbl ORDER BY id asc" ) or die("SELECT Error: ".mysql_error()); 
 
     print "<div class='table-contain'>\n"; 
     print "<table class='table table-sm table-dark table-hover table-bordered text-center'>\n";
