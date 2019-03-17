@@ -10,13 +10,6 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-<<<<<<< HEAD
-                <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle" id="navbarDropdownAccount" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">My Account</a>
-                    <div class="dropdown-menu p-2 bg-dark text-white border-primary" aria-labelledby="navbarDropdownAccount">
-                        <section class="text-center"><img src="../img/user_img.jpg" width="80" height="80" alt="user_icon">
-=======
                 <li class="nav-item dropdown bg-dark">
                     <a href="" class="nav-link dropdown-toggle" id="navbarDropdownAccount" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
