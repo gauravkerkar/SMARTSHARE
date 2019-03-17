@@ -10,7 +10,7 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown bg-dark">
+                <li class="nav-item dropdown">
                     <a href="" class="nav-link dropdown-toggle" id="navbarDropdownAccount" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu p-2 bg-dark text-white border-primary" aria-labelledby="navbarDropdownAccount">

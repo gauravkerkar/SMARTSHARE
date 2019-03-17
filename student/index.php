@@ -147,8 +147,8 @@
             <?php
               while ($row = mysqli_fetch_array($result)) {
                 echo "<div id='img_div'>";
-                    echo "<a href='../notice/".$row['image']."' download><img id='image-id' src='../notice/".$row['image']."' ></a>";
-                    echo "<p>".$row['image_txt']."</p>";
+                    echo "<a href='../notice/".$row['image']."' download><img id='image-id' src='../notice/".$row['image']."' >";
+                    echo "<p>".$row['image_txt']."</p></a>";
                 echo "</div>";
               }
             ?>
