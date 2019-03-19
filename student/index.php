@@ -64,10 +64,7 @@
             margin-top: 30px;
         }
 
-        div.dropdown-menu.p-2 {
-            width: max-content;
-            height: 14.6em;
-        }
+       
         div .sam{
             width: 158px;
         }
