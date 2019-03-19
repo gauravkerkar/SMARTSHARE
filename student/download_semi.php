@@ -7,32 +7,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SEM I | DOWNLOAD FILES</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Bootstrap 4 link-->
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <script src="../bootstrap/jquery/jquery.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <!--Bootstrap 4 CDN link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 
 <style>
     body {
-            background: url(../img/background.svg) !important;
-            background-size: contain;
-        }
+        background: url(../img/background.svg) !important;
+        background-size: contain;
+    }
 
-        .box-hero {
-            position: relative;
-            border-radius: 8px;
-            margin-top: 30px;
-            background: #ffffff;
-            border-top: 3px solid #3c8dbc;
-            margin-bottom: 20px;
+    .box-hero {
+        position: relative;
+        border-radius: 8px;
+        margin-top: 30px;
+        background: #ffffff;
+        border-top: 3px solid #3c8dbc;
+        margin-bottom: 20px;
 
-            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-        }
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    }
 
-        div.dropdown-menu.p-2 {
-            width: max-content;
-        }
+    div.dropdown-menu.p-2 {
+        width: max-content;
+    }
 
     .sem {
         padding: 50px;
@@ -43,19 +44,37 @@
 
 <body>
     <?php include('navigation.php'); ?>
-    <div class="sem">
-        <h1 class="text-center text-white pb-5" style="font-family:'Times New Roman', Times, serif">SEMESTER I</h1>
+    <br>
+    <div class="container">
         <div class="row">
-            <div class="col"><a href="download_semi_notes.php" data-toggle="tooltip" title="Notes"><img
-                        src="../img/notes.png"></a>
-            </div>
-            <div class="col"><a href="download_semi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
-            </div>
-            <div class="col"><a href="download_semi_que.php" data-toggle="tooltip" title="Question Papers"><img
-                        src="../img/question.png"></a></div>
+        <div class="col-md-3">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px" href="download_semi_notes.php">
+                <div>
+                <img src="../img/notes.png">
+                <div class="text-white">Notes</div>
+                </div>
+            </a>
         </div>
+        <div class="col-md-3">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px" href="download_semi_timetbl.php">
+                <img src="../img/timetable.png">
+                <div class="text-white">Time Table</div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px" href="download_semi_que.php">
+                <img src="../img/question.png">
+                <div class="text-white">Question Papers</div>
+            </a>
+        </div>
+        <div class="col-md-3">
+                <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px" href="download_semi_que.php">
+                    <img src="../img/question.png">
+                    <div class="text-white">Syllabus</div>
+                </a>
+            </div>
     </div>
-
+    </div>
 </body>
 
 </html>

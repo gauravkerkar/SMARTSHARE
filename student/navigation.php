@@ -17,7 +17,6 @@
                         aria-labelledby="navbarDropdownAccount">
                         <section class="text-center"><img src="../img/user_img.jpg" width="80" height="80"
                                 alt="user_icon">
->>>>>>> 1136d7dfa3e0a0e5ac885c50bd618de0da124bb1
                         </section>
                         <b>Name :</b> <?php echo $row['name']; ?><br>
                         <b>En No. :</b> <?php echo $row['en_no']; ?><br>
