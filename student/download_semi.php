@@ -51,21 +51,21 @@
         <div class="col-sm-4">
             <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_notes.php">
                 <div>
-                <img  class="img-responsive" src="../img/notes.png">
+                <img  class="img-responsive" width="90" src="../img/notes.png">
                 <div class="text-white">Notes</div>
                 </div>
             </a>
         </div>
         <div class="col-sm-4">
             <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_timetbl.php">
-                <img src="../img/timetable.png">
+                <img width="90" src="../img/timetable.png">
                 <div class="text-white">Time Table</div>
             </a>
         </div>
         <div class="col-sm-4">
             <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_que.php">
-                <img src="../img/question.png">
-                <div class="text-white">Question Papers</div>
+                <img width="90" src="../img/question.png">
+                <div class="text-white">Q.Papers</div>
             </a>
         </div>
     </div>
