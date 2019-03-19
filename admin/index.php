@@ -142,8 +142,8 @@
             <div class="row">
                 <div class="col-xs-6 col-md-2" style="
                 padding-left: 27px;">
-                        <a href="upload_notice.php" class="btn btn-app buttonsborder"><img src="../img/sem1.png" class="sem"
-                                alt="sem1">Semester I</a>
+                        <a href="upload_notice.php" class="btn btn-app buttonsborder"><img src="../img/notice.png" class="sem"
+                                alt="sem1">Notice</a>
                     </div>
                 </div>
                 </div>
