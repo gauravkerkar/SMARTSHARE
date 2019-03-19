@@ -1,3 +1,12 @@
+<html>
+    <head>
+        <style>
+            div.dropdown-menu.p-2 {
+                width: max-content !important;
+                height: 13.3em !important;
+            }
+            </style>
+        </head>
 <div class="home_hero">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <span class="navbar-brand"><img src="../img/logo.png" style="width:40px" alt="logo"></span>
