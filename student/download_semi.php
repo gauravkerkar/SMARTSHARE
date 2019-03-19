@@ -48,9 +48,9 @@
     <div class="container text-center" style="background:rgba(209, 183, 183, 0.801); border-radius: 1em; border-left:0.4em solid aqua; border-right: 0.4em solid aqua">
         <div class="row">
         <div class="col-sm-3">
-            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_notes.php">
+            <a class="btn btn-primary" style="width:9rem; height:8.4rem; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_notes.php">
                 <div>
-                <img src="../img/notes.png">
+                <img  class="img-responsive" src="../img/notes.png">
                 <div class="text-white">Notes</div>
                 </div>
             </a>
