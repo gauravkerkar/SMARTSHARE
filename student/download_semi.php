@@ -45,34 +45,29 @@
 <body>
     <?php include('navigation.php'); ?>
     <br>
-    <div class="container text-center" style="background:rgba(209, 183, 183, 0.801); border-radius: 1em; border-left:0.4em solid aqua; border-right: 0.4em solid aqua">
+    <br>
+    <div class="container text-center" style="width:60%; background:rgba(209, 183, 183, 0.801); border-radius: 1em; border-left:0.4em solid aqua; border-right: 0.4em solid aqua">
         <div class="row">
-        <div class="col-sm-3">
-            <a class="btn btn-primary" style="width:9rem; height:8.4rem; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_notes.php">
+        <div class="col-sm-4">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_notes.php">
                 <div>
                 <img  class="img-responsive" src="../img/notes.png">
                 <div class="text-white">Notes</div>
                 </div>
             </a>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_timetbl.php">
                 <img src="../img/timetable.png">
                 <div class="text-white">Time Table</div>
             </a>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_que.php">
                 <img src="../img/question.png">
                 <div class="text-white">Question Papers</div>
             </a>
         </div>
-        <div class="col-sm-3">
-                <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_que.php">
-                    <img src="../img/question.png">
-                    <div class="text-white">Syllabus</div>
-                </a>
-            </div>
     </div>
     </div>
 </body>
