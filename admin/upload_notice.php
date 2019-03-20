@@ -34,7 +34,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SMARTSHARE | UPLOAD-notice</title>
+    <title>ADMIN | UPLOAD NOTICE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Bootstrap 4 CDN link-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -100,7 +100,7 @@
               while ($row = mysqli_fetch_array($result)) {
                 echo "<div id='img_div'>";
                     echo "<a href='../notice/".$row['image']."' download><img class='img-fluid rounded' src='../notice/".$row['image']."' ></a>";
-                    echo "<p>".$row['image_txt']."</p>";
+                    echo "<h4 class='text-center text-white'>".$row['image_txt']."</h4>";
                 echo "</div>";
               }
             ?>
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                 <div>
-                    <input class="btn btn-primary" type="submit" name="upload" value="upload">
+                    <input class="btn btn-primary" type="submit" name="upload" value="Upload">
                 </div>
                 <br>
             </form>

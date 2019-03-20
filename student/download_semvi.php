@@ -46,15 +46,30 @@
     <?php include('navigation.php'); ?>
     <div class="sem">
         <h1 class="text-center text-white pb-5" style="font-family:'Times New Roman', Times, serif">SEMESTER VI</h1>
+        <div class="container text-center" style="width:60%; background:rgba(209, 183, 183, 0.801); border-radius: 1em; border-left:0.4em solid aqua; border-right: 0.4em solid aqua">
         <div class="row">
-            <div class="col"><a href="download_semvi_notes.php" data-toggle="tooltip" title="Notes"><img
-                        src="../img/notes.png"></a>
-            </div>
-            <div class="col"><a href="download_semvi_timetbl.php" data-toggle="tooltip" title="TimeTable"><img src="../img/timetable.png"></a>
-            </div>
-            <div class="col"><a href="download_semvi_que.php" data-toggle="tooltip" title="Question Papers"><img
-                        src="../img/question.png"></a></div>
+        <div class="col-sm-4">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semvi_notes.php">
+                <div>
+                <img  class="img-responsive" width="90" src="../img/notes.png">
+                <div class="text-white">Notes</div>
+                </div>
+            </a>
         </div>
+        <div class="col-sm-4">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semvi_timetbl.php">
+                <img width="90" src="../img/timetable.png">
+                <div class="text-white">Time Table</div>
+            </a>
+        </div>
+        <div class="col-sm-4">
+            <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semvi_que.php">
+                <img width="90" src="../img/question.png">
+                <div class="text-white">Q Papers</div>
+            </a>
+        </div>
+    </div>
+    </div>
     </div>
 
 </body>

@@ -44,8 +44,8 @@
 
 <body>
     <?php include('navigation.php'); ?>
-    <br>
-    <br>
+    <div class="sem">
+        <h1 class="text-center text-white pb-5" style="font-family:'Times New Roman', Times, serif">SEMESTER I</h1>
     <div class="container text-center" style="width:60%; background:rgba(209, 183, 183, 0.801); border-radius: 1em; border-left:0.4em solid aqua; border-right: 0.4em solid aqua">
         <div class="row">
         <div class="col-sm-4">
@@ -65,9 +65,10 @@
         <div class="col-sm-4">
             <a class="btn btn-primary" style="width:9em; height:8.4em; margin-bottom: 12px; margin-top: 12px; border-top:3px solid honeydew;border-left: 3px solid honeydew;" href="download_semi_que.php">
                 <img width="90" src="../img/question.png">
-                <div class="text-white">Q.Papers</div>
+                <div class="text-white">Q Papers</div>
             </a>
         </div>
+    </div>
     </div>
     </div>
 </body>
