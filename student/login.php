@@ -175,9 +175,6 @@ if (isset($_POST['login'])) {
                         <div class="d-flex justify-content-center links">
                             <a href="forgot_password.php" class="text-white">Forgot your password?</a>
                         </div>
-                        <div class="d-flex justify-content-center links pt-2">
-                            <a href="../admin/login.php" class="text-white">Admin login</a>
-                        </div>
                     </form>
                 </div>
             </div>

@@ -170,7 +170,7 @@ if (isset($_POST['register'])) {
           <input type="submit" name="register" class="btn login_btn" value="Register">
         </div>
         <div class="d-flex justify-content-center links py-2">
-            Already have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
+            Already have an account? <a href="login.php" class="ml-2 text-white">Sign in</a>
         </div>
         </form>
       </div>

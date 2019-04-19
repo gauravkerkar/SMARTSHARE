@@ -1,12 +1,37 @@
+<?php
+    $db = mysqli_connect('localhost', 'root', '', 'smartshare');
+    $success = "";
+
+    if(isset($_POST['update'])) {
+        $id = mysqli_real_escape_string($db, $_POST['id']);
+        $name = mysqli_real_escape_string($db, $_POST['name']);
+        $pwd = mysqli_real_escape_string($db, $_POST['pwd']);
+        $sql = "UPDATE admin SET id='$id', username='$name', password='$pwd' WHERE id='{$row['id']}'";
+        $res = mysqli_query($db, $sql) or die(mysqli_error($db));
+        $success = "Your details were updated successfully!";
+    }
+?>
+
 <html>
-    <head>
-        <style>
-            div.dropdown-menu.p-2 {
-                width: max-content !important;
-                height: 13.3em !important;
+
+<head>
+    <style>
+        div.dropdown-menu.p-2 {
+            width: max-content !important;
+            height: 13.3em !important;
+        }
+    </style>
+    <script>
+        function showpass() {
+            var pass = document.getElementById('pass');
+            if (document.getElementById('check').checked) {
+                pass.setAttribute('type', 'text');
+            } else {
+                pass.setAttribute('type', 'password');
             }
-            </style>
-        </head>
+        }
+    </script>
+</head>
 <div class="home_hero">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <span class="navbar-brand"><img src="../img/logo.png" style="width:40px" alt="logo"></span>
@@ -20,9 +45,10 @@
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="" class="nav-link dropdown-toggle" id="navbarDropdownAccount" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">My Account</a>
-                    <div class="dropdown-menu p-2 bg-dark text-white border-primary" aria-labelledby="navbarDropdownAccount">
+                    <a href="" class="nav-link dropdown-toggle" id="navbarDropdownAccount" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My Account</a>
+                    <div class="dropdown-menu p-2 bg-dark text-white border-primary"
+                        aria-labelledby="navbarDropdownAccount">
                         <section class="text-center"><img src="../img/admin_img.PNG" width="80" height="80"
                                 alt="user_icon"></section>
                         <b>Admin Id :</b> <?php echo $row['id']; ?><br>
@@ -52,6 +78,7 @@
         </div>
     </nav>
 </div>
+<center><strong><?php echo $success; ?></strong></center>
 
 
 <div class="modal fade" id="myModal">
@@ -63,9 +90,28 @@
             </div>
             <form method="POST">
                 <div class="modal-body">
-                    <input type="tel" name="id" class="form-control" value="<?php echo $row['id']; ?>"><br>
-                    <input type="text" name="name" class="form-control" value="<?php echo $row['username']; ?>"><br>
-                    <input type="password" name="pwd" class="form-control" value="<?php echo $row['password']; ?>">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Admin Id</span>
+                        </div>
+                        <input type="tel" name="id" class="form-control" value="<?php echo $row['id']; ?>">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Username</span>
+                        </div>
+                        <input type="text" name="name" class="form-control" value="<?php echo $row['username']; ?>">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Password</span>
+                        </div>
+                        <input type="password" name="pwd" id="pass" class="form-control"
+                            value="<?php echo $row['password']; ?>">
+                        <div class="input-group-append">
+                            <div class="input-group-text"><input type="checkbox" onclick="showpass();" id="check"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <input type="submit" name="update" class="btn btn-primary" value="Update">
@@ -74,15 +120,3 @@
         </div>
     </div>
 </div>
-
-<?php
-    $db = mysqli_connect('localhost', 'root', '', 'smartshare');
-
-    if(isset($_POST['update'])) {
-        $id = mysqli_real_escape_string($db, $_POST['id']);
-        $name = mysqli_real_escape_string($db, $_POST['name']);
-        $pwd = mysqli_real_escape_string($db, $_POST['pwd']);
-        $sql = "UPDATE admin SET id='$id', username='$name', password='$pwd' WHERE id='{$row['id']}'";
-        $res = mysqli_query($db, $sql) or die(mysqli_error($db));
-    }
-?>

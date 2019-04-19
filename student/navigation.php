@@ -1,3 +1,19 @@
+<?php
+    $db = mysqli_connect('localhost', 'root', '', 'smartshare');
+    $err = "";
+
+    if(isset($_POST['update'])) {
+        if($_POST['pwd2']==$_POST['pwd3'] && $_POST['pwd1']==$row['password']) {
+            $pwd1 = mysqli_real_escape_string($db, $_POST['pwd1']);
+            $pwd2 = mysqli_real_escape_string($db, $_POST['pwd2']);
+            $sql = "UPDATE students SET password='$pwd2' WHERE password='$pwd1'";
+            $res = mysqli_query($db, $sql) or die(mysqli_error($db));
+            $err = "Your password was updated succesfully!";
+        }   else {
+            $err = "Your passwords did not match!";
+        }
+    }
+?>
 <html>
     <head>
         <style>
@@ -5,8 +21,8 @@
                 width: max-content !important;
                 height: 14.6em !important;
             }
-            </style>
-        </head>
+        </style>
+    </head>
 <div class="home_hero">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <span class="navbar-brand"><img src="../img/logo.png" style="width:40px" alt="logo"></span>
@@ -56,6 +72,7 @@
         </div>
     </nav>
 </div>
+<center><strong><?php echo $err; ?></strong></center>
 
 <div class="modal fade" id="myModal">
     <div class="modal-dialog">
@@ -67,7 +84,8 @@
             <form method="POST">
                 <div class="modal-body">
                     <input type="password" name="pwd1" class="form-control" placeholder="Old password"><br>
-                    <input type="password" name="pwd2" class="form-control" placeholder="New password">
+                    <input type="password" name="pwd2" class="form-control" placeholder="New password"><br>
+                    <input type="password" name="pwd3" class="form-control" placeholder="Confirm password">
                 </div>
                 <div class="modal-footer">
                     <input type="submit" name="update" class="btn btn-primary" value="Update">
@@ -76,13 +94,3 @@
         </div>
     </div>
 </div>
-<?php
-    $db = mysqli_connect('localhost', 'root', '', 'smartshare');
-
-    if(isset($_POST['update'])) {
-        $pwd1 = mysqli_real_escape_string($db, $_POST['pwd1']);
-        $pwd2 = mysqli_real_escape_string($db, $_POST['pwd2']);
-        $sql = "UPDATE students SET password='$pwd2' WHERE password='$pwd1'";
-        $res = mysqli_query($db, $sql) or die(mysqli_error($db));
-    }
-?>

@@ -95,18 +95,7 @@
     <?php include('navigation.php'); ?>
     <br>
     <div class="container notice"><h3 class="text-white">NOTICE</h3>
-    <div id="content">
-            <?php
-              while ($row = mysqli_fetch_array($result)) {
-                echo "<div id='img_div'>";
-                    echo "<a href='../notice/".$row['image']."' download><img class='img-fluid rounded' src='../notice/".$row['image']."' ></a>";
-                    echo "<h4 class='text-center text-white'>".$row['image_txt']."</h4>";
-                echo "</div>";
-              }
-            ?>
-            </div>
-            <br>
-            <div class="container">
+        <div class="container">
             <form method="POST" action="upload_notice.php" enctype="multipart/form-data">
                 <div class="form-group row mt-5">
                         <label for="image_txt" class="col-sm-2 col-form-label">
@@ -117,19 +106,29 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                            <label for="image" class="col-sm-2 col-form-label">
-                                <h5 class="text-white">Choose a file:</h5>
-                            </label>
-                            <div class="col-sm-5 input-group">
-                                <input type="file" class="form-control" name="image">
-                            </div>
+                        <label for="image" class="col-sm-2 col-form-label">
+                            <h5 class="text-white">Choose a file:</h5>
+                        </label>
+                        <div class="col-sm-5 input-group">
+                            <input type="file" class="form-control" name="image">
                         </div>
+                    </div>
                 <div>
                     <input class="btn btn-primary" type="submit" name="upload" value="Upload">
                 </div>
                 <br>
             </form>
-          </div>
+        </div>
+        <div id="content">
+            <?php
+              while ($row = mysqli_fetch_array($result)) {
+                echo "<div id='img_div'>";
+                    echo "<a href='../notice/".$row['image']."' download><img class='img-fluid rounded' src='../notice/".$row['image']."' ></a>";
+                    echo "<h4 class='text-center text-white'>".$row['image_txt']."</h4>";
+                echo "</div>";
+              }
+            ?>
+        </div>
           
 </body>
 
