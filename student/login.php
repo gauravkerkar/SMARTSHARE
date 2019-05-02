@@ -172,11 +172,8 @@ if (isset($_POST['login'])) {
                         <div class="d-flex justify-content-center links py-2">
                             Don't have an account? <a href="register.php" class="ml-2 text-white">Sign Up</a>
                         </div>
-                        <div class="d-flex justify-content-center links py-2">
+                        <div class="d-flex justify-content-center links">
                             <a href="forgot_password.php" class="text-white">Forgot your password?</a>
-                        </div>
-                        <div class="d-flex justify-content-center links pb-1">
-                            <a href="../admin/login.php" class="text-white">Admin Login</a>
                         </div>
                     </form>
                 </div>

@@ -171,9 +171,6 @@ if (isset($_POST['admin_login'])) {
                 <div class="d-flex justify-content-center links py-2">
                     <a href="forgot_password.php" class="text-white">Forgot your password?</a>
                 </div>
-                <div class="d-flex justify-content-center links">
-                    <a href="../student/login.php" class="text-white">Student Login</a>
-                </div>
             </div>
         </div>
     </div>
