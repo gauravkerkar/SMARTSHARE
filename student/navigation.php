@@ -47,7 +47,7 @@
                         <b>En No. :</b> <?php echo $row['en_no']; ?><br>
                         <b>Email :</b> <?php echo $row['email']; ?><br>
                         <b>Phno :</b> <?php echo $row['phone_no']; ?><br>
-                        <a href="" class="float-left text-white pt-2" data-toggle="modal" data-target="#myModal">Update
+                        <a href="" class="float-left text-white pt-2 text-primary" data-toggle="modal" data-target="#myModal">Update
                             password</a>
                         <form method="GET"><input type="submit" class="btn btn-primary btn-sm float-right" name="logout"
                                 value="Logout"></form>
@@ -84,8 +84,8 @@
             <form method="POST">
                 <div class="modal-body">
                     <input type="password" name="pwd1" class="form-control" placeholder="Old password"><br>
-                    <input type="password" name="pwd2" class="form-control" placeholder="New password"><br>
-                    <input type="password" name="pwd3" class="form-control" placeholder="Confirm password">
+                    <input type="password" name="pwd2" pattern=".{8,}"   required title="8 characters minimum" class="form-control" placeholder="New password"><br>
+                    <input type="password" name="pwd3" required class="form-control" placeholder="Confirm password">
                 </div>
                 <div class="modal-footer">
                     <input type="submit" name="update" class="btn btn-primary" value="Update">

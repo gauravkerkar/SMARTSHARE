@@ -53,7 +53,7 @@
                                 alt="user_icon"></section>
                         <b>Admin Id :</b> <?php echo $row['id']; ?><br>
                         <b>Admin Username :</b> <?php echo $row['username']; ?><br><br>
-                        <a href="" class="float-left text-white" data-toggle="modal" data-target="#myModal">Update
+                        <a href="" class="float-left text-primary" data-toggle="modal" data-target="#myModal">Update
                             details</a>
                         <form method="GET"><input type="submit" class="btn btn-primary btn-sm float-right" name="logout"
                                 value="Logout"></form>
