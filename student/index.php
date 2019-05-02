@@ -2,7 +2,7 @@
     include('session.php');
   // Create database connection
   $db = mysqli_connect("localhost", "root", "", "smartshare");
-  $result = mysqli_query($db, "SELECT * FROM notice order by id  desc");
+  $result = mysqli_query($db, "SELECT * FROM notice order by id  desc limit 10");
 ?>
 <!DOCTYPE html>
 <html>

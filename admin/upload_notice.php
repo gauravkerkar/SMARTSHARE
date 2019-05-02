@@ -26,7 +26,7 @@
   		$msg = "Failed to upload image";
   	}
   }
-  $result = mysqli_query($db, "SELECT * FROM notice order by id  desc");
+  $result = mysqli_query($db, "SELECT * FROM notice order by id  desc limit 10");
 ?>
 <!DOCTYPE html>
 <html>
