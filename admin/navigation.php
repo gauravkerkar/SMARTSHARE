@@ -5,10 +5,11 @@
     if(isset($_POST['update'])) {
         $id = mysqli_real_escape_string($db, $_POST['id']);
         $name = mysqli_real_escape_string($db, $_POST['name']);
+        $email = mysqli_real_escape_string($db, $_POST['email']);
         $pwd = mysqli_real_escape_string($db, $_POST['pwd']);
-        $sql = "UPDATE admin SET id='$id', username='$name', password='$pwd' WHERE id='{$row['id']}'";
+        $sql = "UPDATE admin SET id='$id', username='$name', email='$email', password='$pwd' WHERE id='{$row['id']}'";
         $res = mysqli_query($db, $sql) or die(mysqli_error($db));
-        $success = "Your details were updated successfully!";
+        $success = "Your details were updated successfully!<br><a href='index.php' class='text-white'>Click here</a> to view updated content";
     }
 ?>
 
@@ -18,7 +19,7 @@
     <style>
         div.dropdown-menu.p-2 {
             width: max-content !important;
-            height: 13.3em !important;
+            height: 14em !important;
         }
     </style>
     <script>
@@ -52,7 +53,8 @@
                         <section class="text-center"><img src="../img/admin_img.PNG" width="80" height="80"
                                 alt="user_icon"></section>
                         <b>Admin Id :</b> <?php echo $row['id']; ?><br>
-                        <b>Admin Username :</b> <?php echo $row['username']; ?><br><br>
+                        <b>Admin Username :</b> <?php echo $row['username']; ?><br>
+                        <b>Admin Email :</b> <?php echo $row['email']; ?><br><br>
                         <a href="" class="float-left text-primary" data-toggle="modal" data-target="#myModal">Update
                             details</a>
                         <form method="GET"><input type="submit" class="btn btn-primary btn-sm float-right" name="logout"
@@ -101,6 +103,12 @@
                             <span class="input-group-text">Username</span>
                         </div>
                         <input type="text" name="name" class="form-control" value="<?php echo $row['username']; ?>">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text pl-3 pr-4">Email</span>
+                        </div>
+                        <input type="email" name="email" class="form-control" value="<?php echo $row['email']; ?>">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">

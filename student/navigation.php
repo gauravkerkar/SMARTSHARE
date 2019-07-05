@@ -8,7 +8,7 @@
             $pwd2 = mysqli_real_escape_string($db, $_POST['pwd2']);
             $sql = "UPDATE students SET password='$pwd2' WHERE password='$pwd1'";
             $res = mysqli_query($db, $sql) or die(mysqli_error($db));
-            $err = "Your password was updated succesfully!";
+            $err = "Your password was updated succesfully!<br><a href='index.php' class='text-white'>Click here</a> to view updated content";
         }   else {
             $err = "Your passwords did not match!";
         }
@@ -19,7 +19,7 @@
         <style>
             div.dropdown-menu.p-2 {
                 width: max-content !important;
-                height: 14.6em !important;
+                height: 14em !important;
             }
         </style>
     </head>
