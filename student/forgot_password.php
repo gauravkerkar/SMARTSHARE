@@ -7,6 +7,7 @@
     require '../PHPMailer/src/SMTP.php';
 
     $db = mysqli_connect('localhost', 'root', '', 'smartshare');
+    $err = "";
     if(isset($_POST['submit'])) {
         $email = $_POST['email'];
         $en_no = $_POST['en_no'];
@@ -35,9 +36,9 @@
     $mail->Body = "Hii {$row['name']} your password is {$row['password']}";
 
     $mail->send();
-    echo '<script>alert("Check your email! We have sent your password")</script>';
+    $err = "Check your email! We have sent your password";
     } catch(Exception $e){
-    echo '<script>alert("Error while retrieving your password! Please check your entered details")</script>';
+    $err = "Error while retrieving your password! Please check your entered details";
 }
 
 }
@@ -151,6 +152,7 @@
             </div>
             <div class="d-flex justify-content-center form_container">
                 <form method="POST">
+                <center><strong><?php echo $err; ?></strong></center>
                 <h5 class="text-center text-white pb-2">FORGOT PASSWORD</h5>
                     <div class="input-group mb-2">
                         <div class="input-group-append">
@@ -167,8 +169,8 @@
               
                     <div class="d-flex justify-content-center mt-3 login_container">
                         <input type="submit" name="submit" class="btn login_btn" value="Submit">
-        </div>
-        <div class="d-flex justify-content-center links pt-2">
+                    </div>
+                <div class="d-flex justify-content-center links pt-2">
                     <a href="login.php" class="text-white">Back to login</a>
                 </div>
                 </form>

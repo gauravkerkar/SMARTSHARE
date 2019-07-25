@@ -2,6 +2,7 @@
 session_start();
 // Connect to the database
 $db = mysqli_connect('localhost', 'root', '', 'smartshare');
+$err = "";
 
 // If the register button is clicked
 if (isset($_POST['register'])) {
@@ -11,12 +12,19 @@ if (isset($_POST['register'])) {
     $mob_no = mysqli_real_escape_string($db, $_POST['mob_no']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
+  //retrieve from database
+  $sql = "SELECT * FROM students WHERE en_no='$en_no'";
+  $result = mysqli_query($db, $sql);
+  $row = mysqli_fetch_array($result);
+
   // If no errors, save the user's data to the database
-  if ($en_no != "" && $name != "" && $email != "" && $mob_no != "" && $password != "") {
+  if ($en_no != $row['en_no']) {
     $query = "INSERT INTO students (en_no, name, email, phone_no, password) VALUES ('$en_no', '$name', '$email', '$mob_no', '$password')";
     mysqli_query($db, $query);
     header('location: login.php'); //redirect to login page
     exit();	
+  } else {
+    $err = "This user is already registered!!!!!";
   }
 }
 ?>
@@ -131,6 +139,7 @@ if (isset($_POST['register'])) {
         </div>
         <div class="d-flex justify-content-center form_container">
           <form method="POST">
+          <center><strong><?php echo $err; ?></strong></center>
             <div class="input-group mb-3">
               <div class="input-group-append">
                 <span class="input-group-text"><img src="../img/id_icon.PNG" width="22"></span>
